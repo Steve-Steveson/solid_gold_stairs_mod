@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": {
+      "item": "minecraft:emerald_block"
+    }
+  },
+  "pattern": [
+    "GGG"
+  ],
+  "result": {
+    "count": 6,
+    "item": "solid_gold_stairs:emerald_slab"
+  },
+  "show_notification": true
+}

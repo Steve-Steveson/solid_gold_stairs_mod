@@ -17,10 +17,33 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropSelf(ModBlocks.COAL_STAIRS.get());
+        this.dropSelf(ModBlocks.IRON_STAIRS.get());
         this.dropSelf(ModBlocks.GOLD_STAIRS.get());
 
+        this.dropSelf(ModBlocks.EMERALD_STAIRS.get());
+        this.dropSelf(ModBlocks.LAPIS_STAIRS.get());
+        this.dropSelf(ModBlocks.DIAMOND_STAIRS.get());
+        this.dropSelf(ModBlocks.NETHERITE_STAIRS.get());
+        this.dropSelf(ModBlocks.AMETHYST_STAIRS.get());
+
+        this.add(ModBlocks.COAL_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.COAL_SLAB.get()));
+        this.add(ModBlocks.IRON_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.IRON_SLAB.get()));
         this.add(ModBlocks.GOLD_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GOLD_SLAB.get()));
+
+        this.add(ModBlocks.EMERALD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.EMERALD_SLAB.get()));
+        this.add(ModBlocks.LAPIS_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LAPIS_SLAB.get()));
+        this.add(ModBlocks.DIAMOND_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.DIAMOND_SLAB.get()));
+        this.add(ModBlocks.NETHERITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.NETHERITE_SLAB.get()));
+        this.add(ModBlocks.AMETHYST_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.AMETHYST_SLAB.get()));
     }
 
     @Override

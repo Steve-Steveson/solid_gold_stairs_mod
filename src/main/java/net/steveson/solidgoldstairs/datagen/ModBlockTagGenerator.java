@@ -19,18 +19,61 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(
+                ModBlocks.COAL_STAIRS.get(),
+                ModBlocks.COAL_SLAB.get(),
+                ModBlocks.IRON_STAIRS.get(),
+                ModBlocks.IRON_SLAB.get(),
                 ModBlocks.GOLD_STAIRS.get(),
-                ModBlocks.GOLD_SLAB.get()
+                ModBlocks.GOLD_SLAB.get(),
+
+                ModBlocks.EMERALD_STAIRS.get(),
+                ModBlocks.EMERALD_SLAB.get(),
+                ModBlocks.LAPIS_STAIRS.get(),
+                ModBlocks.LAPIS_SLAB.get(),
+                ModBlocks.DIAMOND_STAIRS.get(),
+                ModBlocks.DIAMOND_SLAB.get(),
+                ModBlocks.NETHERITE_STAIRS.get(),
+                ModBlocks.NETHERITE_SLAB.get(),
+                ModBlocks.AMETHYST_STAIRS.get(),
+                ModBlocks.AMETHYST_SLAB.get()
+        );
+        this.tag(BlockTags.NEEDS_STONE_TOOL).add(
+                ModBlocks.IRON_STAIRS.get(),
+                ModBlocks.IRON_SLAB.get(),
+                ModBlocks.LAPIS_STAIRS.get(),
+                ModBlocks.LAPIS_SLAB.get()
         );
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(
                 ModBlocks.GOLD_STAIRS.get(),
-                ModBlocks.GOLD_SLAB.get()
+                ModBlocks.GOLD_SLAB.get(),
+                ModBlocks.EMERALD_STAIRS.get(),
+                ModBlocks.EMERALD_SLAB.get(),
+                ModBlocks.DIAMOND_STAIRS.get(),
+                ModBlocks.DIAMOND_SLAB.get()
+        );
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
+                ModBlocks.NETHERITE_STAIRS.get(),
+                ModBlocks.NETHERITE_SLAB.get()
         );
         this.tag(BlockTags.STAIRS).add(
-                ModBlocks.GOLD_STAIRS.get()
+                ModBlocks.COAL_STAIRS.get(),
+                ModBlocks.IRON_STAIRS.get(),
+                ModBlocks.GOLD_STAIRS.get(),
+                ModBlocks.EMERALD_STAIRS.get(),
+                ModBlocks.LAPIS_STAIRS.get(),
+                ModBlocks.DIAMOND_STAIRS.get(),
+                ModBlocks.NETHERITE_STAIRS.get(),
+                ModBlocks.AMETHYST_STAIRS.get()
         );
         this.tag(BlockTags.SLABS).add(
-                ModBlocks.GOLD_SLAB.get()
+                ModBlocks.COAL_SLAB.get(),
+                ModBlocks.IRON_SLAB.get(),
+                ModBlocks.GOLD_SLAB.get(),
+                ModBlocks.EMERALD_SLAB.get(),
+                ModBlocks.LAPIS_SLAB.get(),
+                ModBlocks.DIAMOND_SLAB.get(),
+                ModBlocks.NETHERITE_SLAB.get(),
+                ModBlocks.AMETHYST_SLAB.get()
         );
         this.tag(BlockTags.GUARDED_BY_PIGLINS).add(
                 ModBlocks.GOLD_STAIRS.get(),

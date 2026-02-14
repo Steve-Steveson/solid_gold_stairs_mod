@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:coal_block"
+  },
+  "result": "solid_gold_stairs:coal_stairs"
+}

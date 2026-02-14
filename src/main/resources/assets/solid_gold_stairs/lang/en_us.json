@@ -1,4 +1,19 @@
 {
+  "block.solid_gold_stairs.coal_stairs": "Coal Stairs",
+  "block.solid_gold_stairs.coal_slab": "Coal Slab",
+  "block.solid_gold_stairs.iron_stairs": "Iron Stairs",
+  "block.solid_gold_stairs.iron_slab": "Iron Slab",
   "block.solid_gold_stairs.gold_stairs": "Gold Stairs",
-  "block.solid_gold_stairs.gold_slab": "Gold Slab"
+  "block.solid_gold_stairs.gold_slab": "Gold Slab",
+
+  "block.solid_gold_stairs.emerald_stairs": "Emerald Stairs",
+  "block.solid_gold_stairs.emerald_slab": "Emerald Slab",
+  "block.solid_gold_stairs.lapis_stairs": "Lapis Lazuli Stairs",
+  "block.solid_gold_stairs.lapis_slab": "Lapis Lazuli Slab",
+  "block.solid_gold_stairs.diamond_stairs": "Diamond Stairs",
+  "block.solid_gold_stairs.diamond_slab": "Diamond Slab",
+  "block.solid_gold_stairs.netherite_stairs": "Netherite Stairs",
+  "block.solid_gold_stairs.netherite_slab": "Netherite Slab",
+  "block.solid_gold_stairs.amethyst_stairs": "Amethyst Stairs",
+  "block.solid_gold_stairs.amethyst_slab": "Amethyst Slab"
 }
