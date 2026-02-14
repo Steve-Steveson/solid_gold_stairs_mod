@@ -1,2 +1,27 @@
-package net.steveson.solidgoldstairs.datagen;public class ModItemModelProvider {
+package net.steveson.solidgoldstairs.datagen;
+
+import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+import net.steveson.solidgoldstairs.SolidGoldStairsMod;
+import net.steveson.solidgoldstairs.block.ModBlocks;
+
+public class ModItemModelProvider extends ItemModelProvider {
+    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, SolidGoldStairsMod.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void registerModels() {
+        evenSimplerBlockItem(ModBlocks.GOLD_STAIRS);
+        evenSimplerBlockItem(ModBlocks.GOLD_SLAB);
+    }
+
+    public void evenSimplerBlockItem(RegistryObject<Block> block) {
+        this.withExistingParent(SolidGoldStairsMod.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
 }
