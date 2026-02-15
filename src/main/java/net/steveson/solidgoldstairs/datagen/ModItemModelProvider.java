@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.GOLD_STAIRS);
         evenSimplerBlockItem(ModBlocks.GOLD_SLAB);
 
+        evenSimplerBlockItem(ModBlocks.REDSTONE_SLAB);
         evenSimplerBlockItem(ModBlocks.EMERALD_STAIRS);
         evenSimplerBlockItem(ModBlocks.EMERALD_SLAB);
         evenSimplerBlockItem(ModBlocks.LAPIS_STAIRS);

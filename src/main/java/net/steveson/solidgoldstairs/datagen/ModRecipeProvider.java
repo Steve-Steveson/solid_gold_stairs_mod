@@ -29,6 +29,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.GOLD_BLOCK, ModBlocks.GOLD_STAIRS,consumer);
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.GOLD_BLOCK, ModBlocks.GOLD_SLAB,consumer);
 
+        registerSlabCraftingRecipe(RecipeCategory.REDSTONE, Blocks.REDSTONE_BLOCK, ModBlocks.REDSTONE_SLAB,consumer);
         registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.EMERALD_BLOCK, ModBlocks.EMERALD_STAIRS,consumer);
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.EMERALD_BLOCK, ModBlocks.EMERALD_SLAB,consumer);
         registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_STAIRS,consumer);
@@ -48,6 +49,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerStonecuttingRecipe(Blocks.GOLD_BLOCK, ModBlocks.GOLD_STAIRS, consumer);
         registerStonecuttingRecipe(Blocks.GOLD_BLOCK, ModBlocks.GOLD_SLAB, consumer, 2);
 
+        registerStonecuttingRecipe(Blocks.REDSTONE_BLOCK, ModBlocks.REDSTONE_SLAB, consumer, 2);
         registerStonecuttingRecipe(Blocks.EMERALD_BLOCK, ModBlocks.EMERALD_STAIRS, consumer);
         registerStonecuttingRecipe(Blocks.EMERALD_BLOCK, ModBlocks.EMERALD_SLAB, consumer, 2);
         registerStonecuttingRecipe(Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_STAIRS, consumer);

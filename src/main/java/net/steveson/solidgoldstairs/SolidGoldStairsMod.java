@@ -56,6 +56,7 @@ public class SolidGoldStairsMod
             event.accept(ModBlocks.GOLD_STAIRS);
             event.accept(ModBlocks.GOLD_SLAB);
 
+            event.accept(ModBlocks.REDSTONE_SLAB);
             event.accept(ModBlocks.EMERALD_STAIRS);
             event.accept(ModBlocks.EMERALD_SLAB);
             event.accept(ModBlocks.LAPIS_STAIRS);
@@ -66,6 +67,9 @@ public class SolidGoldStairsMod
             event.accept(ModBlocks.NETHERITE_SLAB);
             event.accept(ModBlocks.AMETHYST_STAIRS);
             event.accept(ModBlocks.AMETHYST_SLAB);
+        }
+        if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
+            event.accept(ModBlocks.REDSTONE_SLAB);
         }
     }
 

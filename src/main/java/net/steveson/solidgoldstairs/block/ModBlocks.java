@@ -18,6 +18,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.steveson.solidgoldstairs.SolidGoldStairsMod;
+import net.steveson.solidgoldstairs.block.custom.PoweredSlabBlock;
+import net.steveson.solidgoldstairs.block.custom.PoweredStairBlock;
 import net.steveson.solidgoldstairs.item.ModItems;
 
 import javax.annotation.Nullable;
@@ -77,6 +79,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> GOLD_SLAB = registerBlock("gold_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
 
+//    public static final RegistryObject<Block> REDSTONE_STAIRS = registerBlock("redstone_stairs",
+//            ()-> new PoweredStairBlock(()-> Blocks.REDSTONE_BLOCK.defaultBlockState(),
+//                    BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK)));
+    public static final RegistryObject<Block> REDSTONE_SLAB = registerBlock("redstone_slab",
+            ()-> new PoweredSlabBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK)));
 
     public static final RegistryObject<Block> EMERALD_STAIRS = registerBlock("emerald_stairs",
             ()-> new StairBlock(()-> Blocks.EMERALD_BLOCK.defaultBlockState(),

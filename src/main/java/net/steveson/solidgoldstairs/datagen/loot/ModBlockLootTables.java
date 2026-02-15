@@ -33,7 +33,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.IRON_SLAB.get()));
         this.add(ModBlocks.GOLD_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.GOLD_SLAB.get()));
-
+        this.add(ModBlocks.REDSTONE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.REDSTONE_SLAB.get()));
         this.add(ModBlocks.EMERALD_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.EMERALD_SLAB.get()));
         this.add(ModBlocks.LAPIS_SLAB.get(),

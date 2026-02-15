@@ -26,6 +26,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.GOLD_STAIRS.get(),
                 ModBlocks.GOLD_SLAB.get(),
 
+                ModBlocks.REDSTONE_SLAB.get(),
                 ModBlocks.EMERALD_STAIRS.get(),
                 ModBlocks.EMERALD_SLAB.get(),
                 ModBlocks.LAPIS_STAIRS.get(),
@@ -69,6 +70,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.COAL_SLAB.get(),
                 ModBlocks.IRON_SLAB.get(),
                 ModBlocks.GOLD_SLAB.get(),
+                ModBlocks.REDSTONE_SLAB.get(),
                 ModBlocks.EMERALD_SLAB.get(),
                 ModBlocks.LAPIS_SLAB.get(),
                 ModBlocks.DIAMOND_SLAB.get(),
