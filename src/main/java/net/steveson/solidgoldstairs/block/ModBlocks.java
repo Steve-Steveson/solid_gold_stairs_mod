@@ -4,6 +4,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -18,6 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.steveson.solidgoldstairs.SolidGoldStairsMod;
 import net.steveson.solidgoldstairs.item.ModItems;
 
+import javax.annotation.Nullable;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -25,7 +28,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, SolidGoldStairsMod.MOD_ID);
 
 
-    public static final RegistryObject<Block> COAL_STAIRS = registerBlock("coal_stairs",
+    public static final RegistryObject<Block> COAL_STAIRS = registerFuelBlock("coal_stairs",
             ()-> new StairBlock(()-> Blocks.COAL_BLOCK.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK)) {
                 @Override
@@ -42,8 +45,8 @@ public class ModBlocks {
                 public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return 5;
                 }
-            });
-    public static final RegistryObject<Block> COAL_SLAB = registerBlock("coal_slab",
+            }, 16000);
+    public static final RegistryObject<Block> COAL_SLAB = registerFuelBlock("coal_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COAL_BLOCK)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
@@ -59,7 +62,7 @@ public class ModBlocks {
                 public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return 5;
                 }
-            });
+            }, 8000);
 
 
     public static final RegistryObject<Block> IRON_STAIRS = registerBlock("iron_stairs",
@@ -93,10 +96,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> DIAMOND_SLAB = registerBlock("diamond_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
-    public static final RegistryObject<Block> NETHERITE_STAIRS = registerBlock("netherite_stairs",
+    public static final RegistryObject<Block> NETHERITE_STAIRS = registerBlockNetherite("netherite_stairs",
             ()-> new StairBlock(()-> Blocks.NETHERITE_BLOCK.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)));
-    public static final RegistryObject<Block> NETHERITE_SLAB = registerBlock("netherite_slab",
+    public static final RegistryObject<Block> NETHERITE_SLAB = registerBlockNetherite("netherite_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)));
 
     public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("amethyst_stairs",
@@ -112,10 +115,35 @@ public class ModBlocks {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties()));
     }
+
+
+    private static <T extends Block> RegistryObject<T> registerFuelBlock(String name, Supplier<T> block, int burnTime) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerFuelBlockItem(name, toReturn, burnTime);
+        return toReturn;
+    }
+    private static <T extends Block> RegistryObject<Item> registerFuelBlockItem(String name, RegistryObject<T> block, int burnTime) {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()) {
+            @Override
+            public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+                return burnTime;
+            }
+        });
+    }
+
+
+    private static <T extends Block> RegistryObject<T> registerBlockNetherite(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItemNetherite(name, toReturn);
+        return toReturn;
+    }
+    private static <T extends Block> RegistryObject<Item> registerBlockItemNetherite(String name, RegistryObject<T> block) {
+        return ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties().fireResistant()));
+    }
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
