@@ -2,14 +2,17 @@ package net.steveson.solidgoldstairs.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.ToolAction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -123,14 +126,47 @@ public class ModBlocks {
     public static final RegistryObject<Block> COPPER_SLAB = registerBlock("copper_slab",
             ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));
 
+
     public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_oxidized_copper_slab",
-            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER)));
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER)) {
+                @Override
+                public @org.jetbrains.annotations.Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
+                   if(context.getItemInHand().getItem() instanceof AxeItem) {
+                       return ModBlocks.OXIDIZED_COPPER_SLAB.get().defaultBlockState().setValue(TYPE, state.getValue(TYPE));
+                   }
+                   return super.getToolModifiedState(state, context, toolAction, simulate);
+                }
+            });
     public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_SLAB = registerBlock("waxed_weathered_copper_slab",
-            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER)));
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER)) {
+                @Override
+                public @org.jetbrains.annotations.Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
+                    if(context.getItemInHand().getItem() instanceof AxeItem) {
+                        return ModBlocks.WEATHERED_COPPER_SLAB.get().defaultBlockState().setValue(TYPE, state.getValue(TYPE));
+                    }
+                    return super.getToolModifiedState(state, context, toolAction, simulate);
+                }
+            });
     public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_SLAB = registerBlock("waxed_exposed_copper_slab",
-            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER)));
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER)) {
+                @Override
+                public @org.jetbrains.annotations.Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
+                    if(context.getItemInHand().getItem() instanceof AxeItem) {
+                        return ModBlocks.EXPOSED_COPPER_SLAB.get().defaultBlockState().setValue(TYPE, state.getValue(TYPE));
+                    }
+                    return super.getToolModifiedState(state, context, toolAction, simulate);
+                }
+            });
     public static final RegistryObject<Block> WAXED_COPPER_SLAB = registerBlock("waxed_copper_slab",
-            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK)));
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK)) {
+                @Override
+                public @org.jetbrains.annotations.Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
+                    if(context.getItemInHand().getItem() instanceof AxeItem) {
+                        return ModBlocks.COPPER_SLAB.get().defaultBlockState().setValue(TYPE, state.getValue(TYPE));
+                    }
+                    return super.getToolModifiedState(state, context, toolAction, simulate);
+                }
+            });
 
 
 
