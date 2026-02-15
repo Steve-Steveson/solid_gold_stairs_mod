@@ -27,4 +27,5 @@ public class PoweredSlabBlock extends SlabBlock {
         }
         return 0;
     }
+
 }

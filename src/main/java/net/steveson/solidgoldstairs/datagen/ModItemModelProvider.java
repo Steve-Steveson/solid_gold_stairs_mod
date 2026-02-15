@@ -22,7 +22,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.IRON_SLAB);
         evenSimplerBlockItem(ModBlocks.GOLD_STAIRS);
         evenSimplerBlockItem(ModBlocks.GOLD_SLAB);
-
+        evenSimplerBlockItem(ModBlocks.REDSTONE_STAIRS);
         evenSimplerBlockItem(ModBlocks.REDSTONE_SLAB);
         evenSimplerBlockItem(ModBlocks.EMERALD_STAIRS);
         evenSimplerBlockItem(ModBlocks.EMERALD_SLAB);
@@ -34,6 +34,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.NETHERITE_SLAB);
         evenSimplerBlockItem(ModBlocks.AMETHYST_STAIRS);
         evenSimplerBlockItem(ModBlocks.AMETHYST_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.OXIDIZED_COPPER_SLAB);
+        evenSimplerBlockItem(ModBlocks.WEATHERED_COPPER_SLAB);
+        evenSimplerBlockItem(ModBlocks.EXPOSED_COPPER_SLAB);
+        evenSimplerBlockItem(ModBlocks.COPPER_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.WAXED_OXIDIZED_COPPER_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_WEATHERED_COPPER_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_EXPOSED_COPPER_SLAB);
+        evenSimplerBlockItem(ModBlocks.WAXED_COPPER_SLAB);
     }
 
     public void evenSimplerBlockItem(RegistryObject<Block> block) {

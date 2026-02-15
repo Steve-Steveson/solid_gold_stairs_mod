@@ -7,10 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.steveson.solidgoldstairs.SolidGoldStairsMod;
 import net.steveson.solidgoldstairs.block.custom.PoweredSlabBlock;
 import net.steveson.solidgoldstairs.block.custom.PoweredStairBlock;
+import net.steveson.solidgoldstairs.block.custom.UncutWeatheringCopperSlabBlock;
 import net.steveson.solidgoldstairs.item.ModItems;
 
 import javax.annotation.Nullable;
@@ -79,9 +77,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> GOLD_SLAB = registerBlock("gold_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
 
-//    public static final RegistryObject<Block> REDSTONE_STAIRS = registerBlock("redstone_stairs",
-//            ()-> new PoweredStairBlock(()-> Blocks.REDSTONE_BLOCK.defaultBlockState(),
-//                    BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK)));
+    public static final RegistryObject<Block> REDSTONE_STAIRS = registerBlock("redstone_stairs",
+            ()-> new PoweredStairBlock(()-> Blocks.REDSTONE_BLOCK.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK)));
     public static final RegistryObject<Block> REDSTONE_SLAB = registerBlock("redstone_slab",
             ()-> new PoweredSlabBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_BLOCK)));
 
@@ -114,6 +112,27 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
     public static final RegistryObject<Block> AMETHYST_SLAB = registerBlock("amethyst_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
+
+
+    public static final RegistryObject<Block> OXIDIZED_COPPER_SLAB = registerBlock("oxidized_copper_slab",
+            ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER)));
+    public static final RegistryObject<Block> WEATHERED_COPPER_SLAB = registerBlock("weathered_copper_slab",
+            ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER)));
+    public static final RegistryObject<Block> EXPOSED_COPPER_SLAB = registerBlock("exposed_copper_slab",
+            ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER)));
+    public static final RegistryObject<Block> COPPER_SLAB = registerBlock("copper_slab",
+            ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));
+
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_oxidized_copper_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER)));
+    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_SLAB = registerBlock("waxed_weathered_copper_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER)));
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_SLAB = registerBlock("waxed_exposed_copper_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER)));
+    public static final RegistryObject<Block> WAXED_COPPER_SLAB = registerBlock("waxed_copper_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK)));
+
+
 
 
 

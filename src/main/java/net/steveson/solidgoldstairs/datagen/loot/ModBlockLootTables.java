@@ -20,7 +20,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.COAL_STAIRS.get());
         this.dropSelf(ModBlocks.IRON_STAIRS.get());
         this.dropSelf(ModBlocks.GOLD_STAIRS.get());
-
+        this.dropSelf(ModBlocks.REDSTONE_STAIRS.get());
         this.dropSelf(ModBlocks.EMERALD_STAIRS.get());
         this.dropSelf(ModBlocks.LAPIS_STAIRS.get());
         this.dropSelf(ModBlocks.DIAMOND_STAIRS.get());
@@ -45,6 +45,23 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.NETHERITE_SLAB.get()));
         this.add(ModBlocks.AMETHYST_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.AMETHYST_SLAB.get()));
+
+        this.add(ModBlocks.OXIDIZED_COPPER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.OXIDIZED_COPPER_SLAB.get()));
+        this.add(ModBlocks.WEATHERED_COPPER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WEATHERED_COPPER_SLAB.get()));
+        this.add(ModBlocks.EXPOSED_COPPER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.EXPOSED_COPPER_SLAB.get()));
+        this.add(ModBlocks.COPPER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.COPPER_SLAB.get()));
+        this.add(ModBlocks.WAXED_OXIDIZED_COPPER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WAXED_OXIDIZED_COPPER_SLAB.get()));
+        this.add(ModBlocks.WAXED_WEATHERED_COPPER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WAXED_WEATHERED_COPPER_SLAB.get()));
+        this.add(ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get()));
+        this.add(ModBlocks.WAXED_COPPER_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.WAXED_COPPER_SLAB.get()));
     }
 
     @Override
