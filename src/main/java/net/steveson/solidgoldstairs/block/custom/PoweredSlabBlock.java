@@ -3,6 +3,7 @@ package net.steveson.solidgoldstairs.block.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -15,6 +16,16 @@ public class PoweredSlabBlock extends SlabBlock {
     }
     public boolean isSignalSource(BlockState pState) {
         return pState.getValue(TYPE) != SlabType.TOP;
+    }
+    @Override
+    public int getDirectSignal(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
+        if(pState.getValue(TYPE) == SlabType.DOUBLE) {
+            return 15;
+        }
+        if(pState.getValue(TYPE) == SlabType.BOTTOM) {
+            return 7;
+        }
+        return 0;
     }
     public int getSignal(BlockState pBlockState, BlockGetter pBlockAccess, BlockPos pPos, Direction pSide) {
         if(pBlockState.getValue(TYPE) == SlabType.DOUBLE) {
