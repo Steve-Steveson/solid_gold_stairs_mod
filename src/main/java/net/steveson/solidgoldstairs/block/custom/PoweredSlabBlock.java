@@ -19,10 +19,10 @@ public class PoweredSlabBlock extends SlabBlock {
     }
     @Override
     public int getDirectSignal(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
-        if(pState.getValue(TYPE) == SlabType.DOUBLE) {
+        if(pState.getValue(TYPE) == SlabType.DOUBLE && pLevel.getBlockState(pPos.relative(pDirection.getOpposite())).getBlock() == Blocks.COMPARATOR) {
             return 15;
         }
-        if(pState.getValue(TYPE) == SlabType.BOTTOM) {
+        if(pState.getValue(TYPE) == SlabType.BOTTOM&& pLevel.getBlockState(pPos.relative(pDirection.getOpposite())).getBlock() == Blocks.COMPARATOR) {
             return 7;
         }
         return 0;
