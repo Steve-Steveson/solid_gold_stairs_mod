@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.Optional;
 import java.util.function.Function;
 
+// This file copied from a mod called Copper Age Backport by Smallinger, which is allowed under the MIT License
 /**
  * Utility class for handling custom weathering/oxidation logic.
  * Use this when blocks can't be registered in vanilla's immutable WeatheringCopper maps.

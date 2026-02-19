@@ -14,9 +14,12 @@ public class PoweredSlabBlock extends SlabBlock {
     public PoweredSlabBlock(Properties pProperties) {
         super(pProperties);
     }
+
     public boolean isSignalSource(BlockState pState) {
         return pState.getValue(TYPE) != SlabType.TOP;
     }
+
+    // Allow it to affect the sides of comparators, but needs to be limited to only comparators, or it will power things through solid blocks
     @Override
     public int getDirectSignal(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
         if(pState.getValue(TYPE) == SlabType.DOUBLE && pLevel.getBlockState(pPos.relative(pDirection.getOpposite())).getBlock() == Blocks.COMPARATOR) {

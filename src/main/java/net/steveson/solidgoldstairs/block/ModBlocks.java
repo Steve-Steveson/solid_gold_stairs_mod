@@ -1,5 +1,6 @@
 package net.steveson.solidgoldstairs.block;
 
+import net.minecraft.client.particle.GlowParticle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;
@@ -168,7 +169,7 @@ public class ModBlocks {
                 }
             });
 
-
+//GlowParticle.WaxOffProvider
 
 
 

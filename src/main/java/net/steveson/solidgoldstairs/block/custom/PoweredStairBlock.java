@@ -19,6 +19,7 @@ public class PoweredStairBlock extends StairBlock {
         super(state, properties);
     }
 
+    // Needs to be true for getDirectSignal to work. Is not directional.
     public boolean isSignalSource(BlockState pState) {
         return true;
     }
@@ -60,6 +61,7 @@ public class PoweredStairBlock extends StairBlock {
         return 11;
     }
 
+    // Allow it to affect the sides of comparators, but needs to be limited to only comparators, or it will power things through solid blocks
     @Override
     public int getDirectSignal(BlockState pState, BlockGetter pLevel, BlockPos pPos, Direction pDirection) {
         if (pLevel.getBlockState(pPos.relative(pDirection.getOpposite())).getBlock() == Blocks.COMPARATOR){
@@ -83,6 +85,7 @@ public class PoweredStairBlock extends StairBlock {
         return 0;
     }
 
+    // Takes priority over isSignalSource. Needs to default to false and selectively enable by direction, or it will connect to dust diagonally up or down like a staircase.
     @Override
     public boolean canConnectRedstone(BlockState state, BlockGetter level, BlockPos pos, @Nullable Direction direction) {
         if (state.getValue(FACING).getOpposite() == direction){
