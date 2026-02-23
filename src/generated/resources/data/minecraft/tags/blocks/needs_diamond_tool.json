@@ -3,6 +3,8 @@
     "solid_gold_stairs:netherite_stairs",
     "solid_gold_stairs:netherite_slab",
     "solid_gold_stairs:obsidian_stairs",
-    "solid_gold_stairs:obsidian_slab"
+    "solid_gold_stairs:obsidian_slab",
+    "solid_gold_stairs:crying_obsidian_stairs",
+    "solid_gold_stairs:crying_obsidian_slab"
   ]
 }

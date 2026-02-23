@@ -2,18 +2,15 @@ package net.steveson.solidgoldstairs.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.ToolAction;
-import net.minecraftforge.common.ToolActions;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -129,31 +126,30 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> OXIDIZED_COPPER_STAIRS = registerBlock("oxidized_copper_stairs",
-            ()-> new UncutWeatheringCopperStairsBlock(()->Blocks.OXIDIZED_COPPER.defaultBlockState(),
+            ()-> new UncutWeatheringCopperStairBlock(()->Blocks.OXIDIZED_COPPER.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER), WeatheringCopper.WeatherState.OXIDIZED));
     public static final RegistryObject<Block> WEATHERED_COPPER_STAIRS = registerBlock("weathered_copper_stairs",
-            ()-> new UncutWeatheringCopperStairsBlock(()->Blocks.WEATHERED_COPPER.defaultBlockState(),
+            ()-> new UncutWeatheringCopperStairBlock(()->Blocks.WEATHERED_COPPER.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER), WeatheringCopper.WeatherState.WEATHERED));
     public static final RegistryObject<Block> EXPOSED_COPPER_STAIRS = registerBlock("exposed_copper_stairs",
-            ()-> new UncutWeatheringCopperStairsBlock(()->Blocks.EXPOSED_COPPER.defaultBlockState(),
+            ()-> new UncutWeatheringCopperStairBlock(()->Blocks.EXPOSED_COPPER.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER), WeatheringCopper.WeatherState.EXPOSED));
     public static final RegistryObject<Block> COPPER_STAIRS = registerBlock("copper_stairs",
-            ()-> new UncutWeatheringCopperStairsBlock(()->Blocks.COPPER_BLOCK.defaultBlockState(),
+            ()-> new UncutWeatheringCopperStairBlock(()->Blocks.COPPER_BLOCK.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK), WeatheringCopper.WeatherState.UNAFFECTED));
 
     public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_STAIRS = registerBlock("waxed_oxidized_copper_stairs",
-            ()-> new CopperStairsBlock(()-> Blocks.WAXED_OXIDIZED_COPPER.defaultBlockState(),
+            ()-> new CopperStairBlock(()-> Blocks.WAXED_OXIDIZED_COPPER.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER), WeatheringCopper.WeatherState.OXIDIZED));
     public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_STAIRS = registerBlock("waxed_weathered_copper_stairs",
-            ()-> new CopperStairsBlock(()-> Blocks.WAXED_WEATHERED_COPPER.defaultBlockState(),
+            ()-> new CopperStairBlock(()-> Blocks.WAXED_WEATHERED_COPPER.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER), WeatheringCopper.WeatherState.WEATHERED));
     public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_STAIRS = registerBlock("waxed_exposed_copper_stairs",
-            ()-> new CopperStairsBlock(()-> Blocks.WAXED_EXPOSED_COPPER.defaultBlockState(),
+            ()-> new CopperStairBlock(()-> Blocks.WAXED_EXPOSED_COPPER.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER), WeatheringCopper.WeatherState.EXPOSED));
     public static final RegistryObject<Block> WAXED_COPPER_STAIRS = registerBlock("waxed_copper_stairs",
-            ()-> new CopperStairsBlock(()-> Blocks.WAXED_COPPER_BLOCK.defaultBlockState(),
+            ()-> new CopperStairBlock(()-> Blocks.WAXED_COPPER_BLOCK.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK), WeatheringCopper.WeatherState.UNAFFECTED));
-
 
     public static final RegistryObject<Block> OXIDIZED_COPPER_SLAB = registerBlock("oxidized_copper_slab",
             ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER)));
@@ -163,7 +159,6 @@ public class ModBlocks {
             ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER)));
     public static final RegistryObject<Block> COPPER_SLAB = registerBlock("copper_slab",
             ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));
-
 
     public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_oxidized_copper_slab",
             ()-> new CopperSlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER), WeatheringCopper.WeatherState.OXIDIZED));
@@ -175,12 +170,56 @@ public class ModBlocks {
             ()-> new CopperSlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK), WeatheringCopper.WeatherState.UNAFFECTED));
 
 
+    public static final RegistryObject<Block> GLOWSTONE_STAIRS = registerBlock("glowstone_stairs",
+            ()-> new StairBlock(()-> Blocks.GLOWSTONE.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.GLOWSTONE)) {
+                @Override
+                public boolean useShapeForLightOcclusion(BlockState pState) {
+                    return false;
+                }
+
+            });
+    public static final RegistryObject<Block> GLOWSTONE_SLAB = registerBlock("glowstone_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).isRedstoneConductor(ModBlocks::never)) {
+                @Override
+                public boolean useShapeForLightOcclusion(BlockState pState) {
+                    return false;
+                }
+            });
+
     public static final RegistryObject<Block> OBSIDIAN_STAIRS = registerBlock("obsidian_stairs",
             ()-> new StairBlock(()-> Blocks.OBSIDIAN.defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)));
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)) {
+                @Override
+                public PushReaction getPistonPushReaction(BlockState state) {
+                    return PushReaction.BLOCK;
+                }
+            });
     public static final RegistryObject<Block> OBSIDIAN_SLAB = registerBlock("obsidian_slab",
-            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)));
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)) {
+                @Override
+                public PushReaction getPistonPushReaction(BlockState state) {
+                    return PushReaction.BLOCK;
+                }
+            });
 
+    public static final RegistryObject<Block> CRYING_OBSIDIAN_STAIRS = registerBlock("crying_obsidian_stairs",
+            ()-> new CryingObsidianStairBlock(()-> Blocks.CRYING_OBSIDIAN.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN)));
+    public static final RegistryObject<Block> CRYING_OBSIDIAN_SLAB = registerBlock("crying_obsidian_slab",
+            ()-> new CryingObsidianSlabBlock(BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN)));
+
+    public static final RegistryObject<Block> MAGMA_STAIRS = registerBlock("magma_stairs",
+            ()-> new MagmaStairBlock(()-> Blocks.MAGMA_BLOCK.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)));
+    public static final RegistryObject<Block> MAGMA_SLAB = registerBlock("magma_slab",
+            ()-> new MagmaSlabBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)));
+
+    public static final RegistryObject<Block> END_STONE_STAIRS = registerBlock("end_stone_stairs",
+            ()-> new StairBlock(()-> Blocks.END_STONE.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.END_STONE)));
+    public static final RegistryObject<Block> END_STONE_SLAB = registerBlock("end_stone_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -205,6 +244,11 @@ public class ModBlocks {
                 return burnTime;
             }
         });
+    }
+
+
+    private static boolean never(BlockState p_50806_, BlockGetter p_50807_, BlockPos p_50808_) {
+        return false;
     }
 
 

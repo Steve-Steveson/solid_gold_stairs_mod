@@ -19,10 +19,10 @@ import net.steveson.solidgoldstairs.block.ModBlocks;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-public class CopperStairsBlock extends StairBlock {
+public class CopperStairBlock extends StairBlock {
     private final WeatheringCopper.WeatherState weatheringState;
 
-    public CopperStairsBlock(Supplier<BlockState> state, Properties properties, WeatheringCopper.WeatherState weatheringState) {
+    public CopperStairBlock(Supplier<BlockState> state, Properties properties, WeatheringCopper.WeatherState weatheringState) {
         super(state, properties);
         this.weatheringState = weatheringState;
     }

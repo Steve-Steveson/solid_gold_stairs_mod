@@ -61,8 +61,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.WAXED_COPPER_SLAB.get(),
 
                 ModBlocks.OBSIDIAN_STAIRS.get(),
-                ModBlocks.OBSIDIAN_SLAB.get()
+                ModBlocks.OBSIDIAN_SLAB.get(),
+                ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
+                ModBlocks.CRYING_OBSIDIAN_SLAB.get(),
+                ModBlocks.MAGMA_STAIRS.get(),
+                ModBlocks.MAGMA_SLAB.get(),
+                ModBlocks.END_STONE_STAIRS.get(),
+                ModBlocks.END_STONE_SLAB.get()
         );
+
 
         this.tag(BlockTags.NEEDS_STONE_TOOL).add(
                 ModBlocks.IRON_STAIRS.get(),
@@ -100,8 +107,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.NETHERITE_STAIRS.get(),
                 ModBlocks.NETHERITE_SLAB.get(),
                 ModBlocks.OBSIDIAN_STAIRS.get(),
-                ModBlocks.OBSIDIAN_SLAB.get()
+                ModBlocks.OBSIDIAN_SLAB.get(),
+                ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
+                ModBlocks.CRYING_OBSIDIAN_SLAB.get()
         );
+
+
         this.tag(BlockTags.STAIRS).add(
                 ModBlocks.COAL_STAIRS.get(),
                 ModBlocks.IRON_STAIRS.get(),
@@ -124,7 +135,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.WAXED_EXPOSED_COPPER_STAIRS.get(),
                 ModBlocks.WAXED_COPPER_STAIRS.get(),
 
-                ModBlocks.OBSIDIAN_STAIRS.get()
+                ModBlocks.GLOWSTONE_STAIRS.get(),
+                ModBlocks.OBSIDIAN_STAIRS.get(),
+                ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
+                ModBlocks.MAGMA_STAIRS.get(),
+                ModBlocks.END_STONE_STAIRS.get()
         );
         this.tag(BlockTags.SLABS).add(
                 ModBlocks.COAL_SLAB.get(),
@@ -148,8 +163,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_COPPER_SLAB.get(),
 
-                ModBlocks.OBSIDIAN_SLAB.get()
+                ModBlocks.GLOWSTONE_SLAB.get(),
+                ModBlocks.OBSIDIAN_SLAB.get(),
+                ModBlocks.CRYING_OBSIDIAN_SLAB.get(),
+                ModBlocks.MAGMA_SLAB.get(),
+                ModBlocks.END_STONE_SLAB.get()
         );
+
 
         this.tag(BlockTags.GUARDED_BY_PIGLINS).add(
                 ModBlocks.GOLD_STAIRS.get(),
@@ -158,7 +178,25 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.DRAGON_IMMUNE).add(
                 ModBlocks.OBSIDIAN_STAIRS.get(),
-                ModBlocks.OBSIDIAN_SLAB.get()
+                ModBlocks.OBSIDIAN_SLAB.get(),
+                ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
+                ModBlocks.CRYING_OBSIDIAN_SLAB.get(),
+                ModBlocks.END_STONE_STAIRS.get(),
+                ModBlocks.END_STONE_SLAB.get()
+        );
+
+
+        this.tag(BlockTags.INFINIBURN_END).add(
+                ModBlocks.MAGMA_STAIRS.get(),
+                ModBlocks.MAGMA_SLAB.get()
+        );
+        this.tag(BlockTags.INFINIBURN_NETHER).add(
+                ModBlocks.MAGMA_STAIRS.get(),
+                ModBlocks.MAGMA_SLAB.get()
+        );
+        this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
+                ModBlocks.MAGMA_STAIRS.get(),
+                ModBlocks.MAGMA_SLAB.get()
         );
     }
 }

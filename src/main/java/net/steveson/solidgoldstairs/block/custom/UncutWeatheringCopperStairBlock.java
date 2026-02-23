@@ -23,11 +23,11 @@ import net.steveson.solidgoldstairs.block.legally_not_stolen_utils.WeatheringHel
 import java.util.Optional;
 import java.util.function.Supplier;
 
-public class UncutWeatheringCopperStairsBlock extends StairBlock implements WeatheringCopper {
+public class UncutWeatheringCopperStairBlock extends StairBlock implements WeatheringCopper {
 
     private final WeatheringCopper.WeatherState weatheringState;
 
-    public UncutWeatheringCopperStairsBlock(Supplier<BlockState> state, Properties properties, WeatherState weatheringState) {
+    public UncutWeatheringCopperStairBlock(Supplier<BlockState> state, Properties properties, WeatherState weatheringState) {
         super(state, properties);
         this.weatheringState = weatheringState;
     }
@@ -125,12 +125,12 @@ public class UncutWeatheringCopperStairsBlock extends StairBlock implements Weat
 
     @Override
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        WeatheringHelper.tryWeather(state, level, pos, random, UncutWeatheringCopperStairsBlock::getNextBlock);
+        WeatheringHelper.tryWeather(state, level, pos, random, UncutWeatheringCopperStairBlock::getNextBlock);
     }
 
     @Override
     public boolean isRandomlyTicking(BlockState state) {
-        return WeatheringHelper.canWeather(state, UncutWeatheringCopperStairsBlock::getNextBlock);
+        return WeatheringHelper.canWeather(state, UncutWeatheringCopperStairBlock::getNextBlock);
     }
 
     @Override
