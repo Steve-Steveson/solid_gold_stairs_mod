@@ -41,6 +41,28 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_STAIRS,consumer);
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_SLAB,consumer);
 
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_COPPER, ModBlocks.OXIDIZED_COPPER_STAIRS,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_COPPER, ModBlocks.WEATHERED_COPPER_STAIRS,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_COPPER, ModBlocks.EXPOSED_COPPER_STAIRS,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.COPPER_BLOCK, ModBlocks.COPPER_STAIRS,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_COPPER, ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_COPPER, ModBlocks.WAXED_WEATHERED_COPPER_STAIRS,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_COPPER, ModBlocks.WAXED_EXPOSED_COPPER_STAIRS,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_COPPER_BLOCK, ModBlocks.WAXED_COPPER_STAIRS,consumer);
+
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.OXIDIZED_COPPER, ModBlocks.OXIDIZED_COPPER_SLAB,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WEATHERED_COPPER, ModBlocks.WEATHERED_COPPER_SLAB,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.EXPOSED_COPPER, ModBlocks.EXPOSED_COPPER_SLAB,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.COPPER_BLOCK, ModBlocks.COPPER_SLAB,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_OXIDIZED_COPPER, ModBlocks.WAXED_OXIDIZED_COPPER_SLAB,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_WEATHERED_COPPER, ModBlocks.WAXED_WEATHERED_COPPER_SLAB,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_COPPER, ModBlocks.WAXED_EXPOSED_COPPER_SLAB,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_COPPER_BLOCK, ModBlocks.WAXED_COPPER_SLAB,consumer);
+
+
+        registerWaxCraftingRecipe(ModBlocks.OXIDIZED_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_COPPER_SLAB, consumer);
+
+
 
         registerStonecuttingRecipe(Blocks.COAL_BLOCK, ModBlocks.COAL_STAIRS, consumer);
         registerStonecuttingRecipe(Blocks.COAL_BLOCK, ModBlocks.COAL_SLAB, consumer, 2);
@@ -97,6 +119,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('I', input)
                 .unlockedBy(getHasName(input), has(input))
                 .save(consumer,  SolidGoldStairsMod.MOD_ID + ":" + "crafting/" + getItemName(output.get()));
+    }
+
+
+    private static void registerWaxCraftingRecipe(RegistryObject<Block> input, RegistryObject<Block> output, Consumer<FinishedRecipe> consumer) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, output.get())
+                .requires(input.get())
+                .requires(Items.HONEYCOMB)
+                .unlockedBy(getHasName(input.get()), has(input.get()))
+                .save(consumer,  SolidGoldStairsMod.MOD_ID + ":" + "crafting/" + getItemName(output.get()) + "_from_honeycomb");
     }
 
 
