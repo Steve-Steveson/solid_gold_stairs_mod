@@ -95,6 +95,10 @@ public class SolidGoldStairsMod
             event.accept(ModBlocks.REDSTONE_STAIRS);
             event.accept(ModBlocks.REDSTONE_SLAB);
         }
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.OBSIDIAN_STAIRS);
+            event.accept(ModBlocks.OBSIDIAN_SLAB);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

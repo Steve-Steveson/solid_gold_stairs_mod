@@ -58,6 +58,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.WAXED_WEATHERED_COPPER_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_EXPOSED_COPPER_SLAB);
         evenSimplerBlockItem(ModBlocks.WAXED_COPPER_SLAB);
+
+        evenSimplerBlockItem(ModBlocks.OBSIDIAN_STAIRS);
+        evenSimplerBlockItem(ModBlocks.OBSIDIAN_SLAB);
     }
 
     public void evenSimplerBlockItem(RegistryObject<Block> block) {

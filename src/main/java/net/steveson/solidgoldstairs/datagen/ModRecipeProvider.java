@@ -63,6 +63,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_EXPOSED_COPPER, ModBlocks.WAXED_EXPOSED_COPPER_SLAB,consumer);
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_COPPER_BLOCK, ModBlocks.WAXED_COPPER_SLAB,consumer);
 
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.OBSIDIAN, ModBlocks.OBSIDIAN_STAIRS,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.OBSIDIAN, ModBlocks.OBSIDIAN_SLAB,consumer);
+
 
         registerWaxCraftingRecipe(ModBlocks.OXIDIZED_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS, consumer);
         registerWaxCraftingRecipe(ModBlocks.WEATHERED_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_COPPER_STAIRS, consumer);
@@ -114,6 +117,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerStonecuttingRecipe(Blocks.WAXED_WEATHERED_COPPER, ModBlocks.WAXED_WEATHERED_COPPER_SLAB, consumer, 2);
         registerStonecuttingRecipe(Blocks.WAXED_EXPOSED_COPPER, ModBlocks.WAXED_EXPOSED_COPPER_SLAB, consumer, 2);
         registerStonecuttingRecipe(Blocks.WAXED_COPPER_BLOCK, ModBlocks.WAXED_COPPER_SLAB, consumer, 2);
+
+        registerStonecuttingRecipe(Blocks.OBSIDIAN, ModBlocks.OBSIDIAN_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.OBSIDIAN, ModBlocks.OBSIDIAN_SLAB, consumer, 2);
     }
 
 

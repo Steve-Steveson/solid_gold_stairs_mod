@@ -175,6 +175,13 @@ public class ModBlocks {
             ()-> new CopperSlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK), WeatheringCopper.WeatherState.UNAFFECTED));
 
 
+    public static final RegistryObject<Block> OBSIDIAN_STAIRS = registerBlock("obsidian_stairs",
+            ()-> new StairBlock(()-> Blocks.OBSIDIAN.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)));
+    public static final RegistryObject<Block> OBSIDIAN_SLAB = registerBlock("obsidian_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)));
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
