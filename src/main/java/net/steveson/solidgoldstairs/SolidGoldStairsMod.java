@@ -66,6 +66,10 @@ public class SolidGoldStairsMod
             event.accept(ModBlocks.DIAMOND_SLAB);
             event.accept(ModBlocks.NETHERITE_STAIRS);
             event.accept(ModBlocks.NETHERITE_SLAB);
+            event.accept(ModBlocks.CHISELED_QUARTZ_STAIRS);
+            event.accept(ModBlocks.CHISELED_QUARTZ_SLAB);
+            event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
+            event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.AMETHYST_STAIRS);
             event.accept(ModBlocks.AMETHYST_SLAB);
 

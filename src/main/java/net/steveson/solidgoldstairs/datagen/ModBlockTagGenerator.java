@@ -35,6 +35,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.DIAMOND_SLAB.get(),
                 ModBlocks.NETHERITE_STAIRS.get(),
                 ModBlocks.NETHERITE_SLAB.get(),
+                ModBlocks.CHISELED_QUARTZ_STAIRS.get(),
+                ModBlocks.CHISELED_QUARTZ_SLAB.get(),
+                ModBlocks.QUARTZ_BRICK_STAIRS.get(),
+                ModBlocks.QUARTZ_BRICK_SLAB.get(),
                 ModBlocks.AMETHYST_STAIRS.get(),
                 ModBlocks.AMETHYST_SLAB.get(),
 
@@ -102,6 +106,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.LAPIS_STAIRS.get(),
                 ModBlocks.DIAMOND_STAIRS.get(),
                 ModBlocks.NETHERITE_STAIRS.get(),
+                ModBlocks.CHISELED_QUARTZ_STAIRS.get(),
+                ModBlocks.QUARTZ_BRICK_STAIRS.get(),
                 ModBlocks.AMETHYST_STAIRS.get(),
 
                 ModBlocks.OXIDIZED_COPPER_STAIRS.get(),
@@ -122,6 +128,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.LAPIS_SLAB.get(),
                 ModBlocks.DIAMOND_SLAB.get(),
                 ModBlocks.NETHERITE_SLAB.get(),
+                ModBlocks.CHISELED_QUARTZ_SLAB.get(),
+                ModBlocks.QUARTZ_BRICK_SLAB.get(),
                 ModBlocks.AMETHYST_SLAB.get(),
 
                 ModBlocks.OXIDIZED_COPPER_SLAB.get(),

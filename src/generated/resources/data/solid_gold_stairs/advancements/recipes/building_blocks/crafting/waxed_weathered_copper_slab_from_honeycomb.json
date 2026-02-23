@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "solid_gold_stairs:crafting/waxed_weathered_copper_slab_from_honeycomb"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_weathered_copper_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "solid_gold_stairs:weathered_copper_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_weathered_copper_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "solid_gold_stairs:crafting/waxed_weathered_copper_slab_from_honeycomb"
+    ]
+  },
+  "sends_telemetry_event": false
+}

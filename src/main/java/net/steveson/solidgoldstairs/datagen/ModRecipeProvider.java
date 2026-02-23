@@ -38,6 +38,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.DIAMOND_BLOCK, ModBlocks.DIAMOND_SLAB,consumer);
         registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_STAIRS,consumer);
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_SLAB,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.CHISELED_QUARTZ_BLOCK, ModBlocks.CHISELED_QUARTZ_STAIRS,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.CHISELED_QUARTZ_BLOCK, ModBlocks.CHISELED_QUARTZ_SLAB,consumer);
+        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.QUARTZ_BRICKS, ModBlocks.QUARTZ_BRICK_STAIRS,consumer);
+        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.QUARTZ_BRICKS, ModBlocks.QUARTZ_BRICK_SLAB,consumer);
         registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_STAIRS,consumer);
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_SLAB,consumer);
 
@@ -60,8 +64,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.WAXED_COPPER_BLOCK, ModBlocks.WAXED_COPPER_SLAB,consumer);
 
 
+        registerWaxCraftingRecipe(ModBlocks.OXIDIZED_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS, consumer);
+        registerWaxCraftingRecipe(ModBlocks.WEATHERED_COPPER_STAIRS, ModBlocks.WAXED_WEATHERED_COPPER_STAIRS, consumer);
+        registerWaxCraftingRecipe(ModBlocks.EXPOSED_COPPER_STAIRS, ModBlocks.WAXED_EXPOSED_COPPER_STAIRS, consumer);
+        registerWaxCraftingRecipe(ModBlocks.COPPER_STAIRS, ModBlocks.WAXED_COPPER_STAIRS, consumer);
         registerWaxCraftingRecipe(ModBlocks.OXIDIZED_COPPER_SLAB, ModBlocks.WAXED_OXIDIZED_COPPER_SLAB, consumer);
-
+        registerWaxCraftingRecipe(ModBlocks.WEATHERED_COPPER_SLAB, ModBlocks.WAXED_WEATHERED_COPPER_SLAB, consumer);
+        registerWaxCraftingRecipe(ModBlocks.EXPOSED_COPPER_SLAB, ModBlocks.WAXED_EXPOSED_COPPER_SLAB, consumer);
+        registerWaxCraftingRecipe(ModBlocks.COPPER_SLAB, ModBlocks.WAXED_COPPER_SLAB, consumer);
 
 
         registerStonecuttingRecipe(Blocks.COAL_BLOCK, ModBlocks.COAL_STAIRS, consumer);
@@ -80,6 +90,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerStonecuttingRecipe(Blocks.DIAMOND_BLOCK, ModBlocks.DIAMOND_SLAB, consumer, 2);
         registerStonecuttingRecipe(Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_STAIRS, consumer);
         registerStonecuttingRecipe(Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.CHISELED_QUARTZ_BLOCK, ModBlocks.CHISELED_QUARTZ_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.CHISELED_QUARTZ_BLOCK, ModBlocks.CHISELED_QUARTZ_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.QUARTZ_BRICKS, ModBlocks.QUARTZ_BRICK_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.QUARTZ_BRICKS, ModBlocks.QUARTZ_BRICK_SLAB, consumer, 2);
         registerStonecuttingRecipe(Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_STAIRS, consumer);
         registerStonecuttingRecipe(Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_SLAB, consumer, 2);
 

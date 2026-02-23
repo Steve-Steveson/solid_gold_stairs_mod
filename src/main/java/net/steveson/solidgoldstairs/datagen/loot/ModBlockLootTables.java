@@ -25,6 +25,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LAPIS_STAIRS.get());
         this.dropSelf(ModBlocks.DIAMOND_STAIRS.get());
         this.dropSelf(ModBlocks.NETHERITE_STAIRS.get());
+        this.dropSelf(ModBlocks.CHISELED_QUARTZ_STAIRS.get());
+        this.dropSelf(ModBlocks.QUARTZ_BRICK_STAIRS.get());
         this.dropSelf(ModBlocks.AMETHYST_STAIRS.get());
 
         this.dropSelf(ModBlocks.OXIDIZED_COPPER_STAIRS.get());
@@ -52,6 +54,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.DIAMOND_SLAB.get()));
         this.add(ModBlocks.NETHERITE_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.NETHERITE_SLAB.get()));
+        this.add(ModBlocks.CHISELED_QUARTZ_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.CHISELED_QUARTZ_SLAB.get()));
+        this.add(ModBlocks.QUARTZ_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.QUARTZ_BRICK_SLAB.get()));
         this.add(ModBlocks.AMETHYST_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.AMETHYST_SLAB.get()));
 

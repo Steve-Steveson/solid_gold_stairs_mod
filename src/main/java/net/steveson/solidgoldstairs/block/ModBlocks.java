@@ -109,6 +109,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHERITE_SLAB = registerBlockNetherite("netherite_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)));
 
+    public static final RegistryObject<Block> CHISELED_QUARTZ_STAIRS = registerBlock("chiseled_quartz_stairs",
+            ()-> new StairBlock(()-> Blocks.CHISELED_QUARTZ_BLOCK.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
+    public static final RegistryObject<Block> CHISELED_QUARTZ_SLAB = registerBlock("chiseled_quartz_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_QUARTZ_BLOCK)));
+
+    public static final RegistryObject<Block> QUARTZ_BRICK_STAIRS = registerBlock("quartz_brick_stairs",
+            ()-> new StairBlock(()-> Blocks.QUARTZ_BRICKS.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)));
+    public static final RegistryObject<Block> QUARTZ_BRICK_SLAB = registerBlock("quartz_brick_slab",
+            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.QUARTZ_BRICKS)));
+
     public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("amethyst_stairs",
             ()-> new StairBlock(()-> Blocks.AMETHYST_BLOCK.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
