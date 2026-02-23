@@ -1,6 +1,5 @@
 package net.steveson.solidgoldstairs.block;
 
-import net.minecraft.client.particle.GlowParticle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.AxeItem;
@@ -14,6 +13,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.ToolAction;
+import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,6 +22,7 @@ import net.steveson.solidgoldstairs.SolidGoldStairsMod;
 import net.steveson.solidgoldstairs.block.custom.PoweredSlabBlock;
 import net.steveson.solidgoldstairs.block.custom.PoweredStairBlock;
 import net.steveson.solidgoldstairs.block.custom.UncutWeatheringCopperSlabBlock;
+import net.steveson.solidgoldstairs.block.custom.UncutWeatheringCopperStairsBlock;
 import net.steveson.solidgoldstairs.item.ModItems;
 
 import javax.annotation.Nullable;
@@ -118,6 +119,33 @@ public class ModBlocks {
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
 
 
+    public static final RegistryObject<Block> OXIDIZED_COPPER_STAIRS = registerBlock("oxidized_copper_stairs",
+            ()-> new UncutWeatheringCopperStairsBlock(()->Blocks.OXIDIZED_COPPER.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER), WeatheringCopper.WeatherState.OXIDIZED));
+    public static final RegistryObject<Block> WEATHERED_COPPER_STAIRS = registerBlock("weathered_copper_stairs",
+            ()-> new UncutWeatheringCopperStairsBlock(()->Blocks.WEATHERED_COPPER.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER), WeatheringCopper.WeatherState.WEATHERED));
+    public static final RegistryObject<Block> EXPOSED_COPPER_STAIRS = registerBlock("exposed_copper_stairs",
+            ()-> new UncutWeatheringCopperStairsBlock(()->Blocks.EXPOSED_COPPER.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER), WeatheringCopper.WeatherState.EXPOSED));
+    public static final RegistryObject<Block> COPPER_STAIRS = registerBlock("copper_stairs",
+            ()-> new UncutWeatheringCopperStairsBlock(()->Blocks.COPPER_BLOCK.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK), WeatheringCopper.WeatherState.UNAFFECTED));
+
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_STAIRS = registerBlock("waxed_oxidized_copper_stairs",
+            ()-> new StairBlock(()-> Blocks.WAXED_OXIDIZED_COPPER.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER)));
+    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_STAIRS = registerBlock("waxed_weathered_copper_stairs",
+            ()-> new StairBlock(()-> Blocks.WAXED_WEATHERED_COPPER.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER)));
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_STAIRS = registerBlock("waxed_exposed_copper_stairs",
+            ()-> new StairBlock(()-> Blocks.WAXED_EXPOSED_COPPER.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER)));
+    public static final RegistryObject<Block> WAXED_COPPER_STAIRS = registerBlock("waxed_copper_stairs",
+            ()-> new StairBlock(()-> Blocks.WAXED_COPPER_BLOCK.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK)));
+
+
     public static final RegistryObject<Block> OXIDIZED_COPPER_SLAB = registerBlock("oxidized_copper_slab",
             ()-> new UncutWeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER)));
     public static final RegistryObject<Block> WEATHERED_COPPER_SLAB = registerBlock("weathered_copper_slab",
@@ -130,13 +158,32 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_oxidized_copper_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER)) {
-                @Override
-                public @org.jetbrains.annotations.Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
-                   if(context.getItemInHand().getItem() instanceof AxeItem) {
-                       return ModBlocks.OXIDIZED_COPPER_SLAB.get().defaultBlockState().setValue(TYPE, state.getValue(TYPE));
-                   }
-                   return super.getToolModifiedState(state, context, toolAction, simulate);
-                }
+//                @Override
+//                public InteractionResult useItemOn(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+//                    ItemStack stack = player.getItemInHand(hand);
+//
+//                    // Check if player is using an axe on a waxed chain - dewax it
+//                    if (stack.is(ItemTags.AXES)) {
+//                        Optional<Block> unwaxedBlock = getUnwaxedBlock(state.getBlock());
+//
+//                        if (unwaxedBlock.isPresent()) {
+//                            level.playSound(player, pos, SoundEvents.AXE_WAX_OFF, SoundSource.BLOCKS, 1.0F, 1.0F);
+//                            level.levelEvent(player, 3004, pos, 0); // WAX_OFF particles
+//
+//                            if (!level.isClientSide) {
+//                                BlockState newState = unwaxedBlock.get().withPropertiesOf(state);
+//                                level.setBlockAndUpdate(pos, newState);
+//                                if (!player.isCreative()) {
+//                                    stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(hand));
+//                                }
+//                            }
+//
+//                            return InteractionResult.sidedSuccess(level.isClientSide);
+//                        }
+//                    }
+//
+//                    return InteractionResult.PASS;
+//                                }
             });
     public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_SLAB = registerBlock("waxed_weathered_copper_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER)) {
@@ -145,7 +192,7 @@ public class ModBlocks {
                     if(context.getItemInHand().getItem() instanceof AxeItem) {
                         return ModBlocks.WEATHERED_COPPER_SLAB.get().defaultBlockState().setValue(TYPE, state.getValue(TYPE));
                     }
-                    return super.getToolModifiedState(state, context, toolAction, simulate);
+                    return super.getToolModifiedState(state, context, ToolActions.AXE_WAX_OFF, simulate);
                 }
             });
     public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_SLAB = registerBlock("waxed_exposed_copper_slab",

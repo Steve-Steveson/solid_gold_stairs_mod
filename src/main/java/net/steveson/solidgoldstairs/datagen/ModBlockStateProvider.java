@@ -35,11 +35,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(((StairBlock) ModBlocks.AMETHYST_STAIRS.get()), blockTexture(Blocks.AMETHYST_BLOCK));
         slabBlock(((SlabBlock) ModBlocks.AMETHYST_SLAB.get()), blockTexture(Blocks.AMETHYST_BLOCK), blockTexture(Blocks.AMETHYST_BLOCK));
 
+        stairsBlock(((StairBlock) ModBlocks.OXIDIZED_COPPER_STAIRS.get()), blockTexture(Blocks.OXIDIZED_COPPER));
+        stairsBlock(((StairBlock) ModBlocks.WEATHERED_COPPER_STAIRS.get()), blockTexture(Blocks.WEATHERED_COPPER));
+        stairsBlock(((StairBlock) ModBlocks.EXPOSED_COPPER_STAIRS.get()), blockTexture(Blocks.EXPOSED_COPPER));
+        stairsBlock(((StairBlock) ModBlocks.COPPER_STAIRS.get()), blockTexture(Blocks.COPPER_BLOCK));
+        stairsBlock(((StairBlock) ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS.get()), blockTexture(Blocks.OXIDIZED_COPPER));
+        stairsBlock(((StairBlock) ModBlocks.WAXED_WEATHERED_COPPER_STAIRS.get()), blockTexture(Blocks.WEATHERED_COPPER));
+        stairsBlock(((StairBlock) ModBlocks.WAXED_EXPOSED_COPPER_STAIRS.get()), blockTexture(Blocks.EXPOSED_COPPER));
+        stairsBlock(((StairBlock) ModBlocks.WAXED_COPPER_STAIRS.get()), blockTexture(Blocks.COPPER_BLOCK));
+
         slabBlock(((SlabBlock) ModBlocks.OXIDIZED_COPPER_SLAB.get()), blockTexture(Blocks.OXIDIZED_COPPER), blockTexture(Blocks.OXIDIZED_COPPER));
         slabBlock(((SlabBlock) ModBlocks.WEATHERED_COPPER_SLAB.get()), blockTexture(Blocks.WEATHERED_COPPER), blockTexture(Blocks.WEATHERED_COPPER));
         slabBlock(((SlabBlock) ModBlocks.EXPOSED_COPPER_SLAB.get()), blockTexture(Blocks.EXPOSED_COPPER), blockTexture(Blocks.EXPOSED_COPPER));
         slabBlock(((SlabBlock) ModBlocks.COPPER_SLAB.get()), blockTexture(Blocks.COPPER_BLOCK), blockTexture(Blocks.COPPER_BLOCK));
-
         slabBlock(((SlabBlock) ModBlocks.WAXED_OXIDIZED_COPPER_SLAB.get()), blockTexture(Blocks.OXIDIZED_COPPER), blockTexture(Blocks.OXIDIZED_COPPER));
         slabBlock(((SlabBlock) ModBlocks.WAXED_WEATHERED_COPPER_SLAB.get()), blockTexture(Blocks.WEATHERED_COPPER), blockTexture(Blocks.WEATHERED_COPPER));
         slabBlock(((SlabBlock) ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get()), blockTexture(Blocks.EXPOSED_COPPER), blockTexture(Blocks.EXPOSED_COPPER));

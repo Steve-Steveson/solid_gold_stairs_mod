@@ -61,6 +61,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerStonecuttingRecipe(Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_STAIRS, consumer);
         registerStonecuttingRecipe(Blocks.AMETHYST_BLOCK, ModBlocks.AMETHYST_SLAB, consumer, 2);
 
+        registerStonecuttingRecipe(Blocks.OXIDIZED_COPPER, ModBlocks.OXIDIZED_COPPER_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.WEATHERED_COPPER, ModBlocks.WEATHERED_COPPER_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.EXPOSED_COPPER, ModBlocks.EXPOSED_COPPER_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.COPPER_BLOCK, ModBlocks.COPPER_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.WAXED_OXIDIZED_COPPER, ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.WAXED_WEATHERED_COPPER, ModBlocks.WAXED_WEATHERED_COPPER_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.WAXED_EXPOSED_COPPER, ModBlocks.WAXED_EXPOSED_COPPER_STAIRS, consumer);
+        registerStonecuttingRecipe(Blocks.WAXED_COPPER_BLOCK, ModBlocks.WAXED_COPPER_STAIRS, consumer);
+
+        registerStonecuttingRecipe(Blocks.OXIDIZED_COPPER, ModBlocks.OXIDIZED_COPPER_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.WEATHERED_COPPER, ModBlocks.WEATHERED_COPPER_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.EXPOSED_COPPER, ModBlocks.EXPOSED_COPPER_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.COPPER_BLOCK, ModBlocks.COPPER_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.WAXED_OXIDIZED_COPPER, ModBlocks.WAXED_OXIDIZED_COPPER_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.WAXED_WEATHERED_COPPER, ModBlocks.WAXED_WEATHERED_COPPER_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.WAXED_EXPOSED_COPPER, ModBlocks.WAXED_EXPOSED_COPPER_SLAB, consumer, 2);
+        registerStonecuttingRecipe(Blocks.WAXED_COPPER_BLOCK, ModBlocks.WAXED_COPPER_SLAB, consumer, 2);
     }
 
 

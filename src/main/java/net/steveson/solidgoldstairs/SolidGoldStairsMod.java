@@ -68,15 +68,23 @@ public class SolidGoldStairsMod
             event.accept(ModBlocks.AMETHYST_STAIRS);
             event.accept(ModBlocks.AMETHYST_SLAB);
 
-            event.accept(ModBlocks.OXIDIZED_COPPER_SLAB);
-            event.accept(ModBlocks.WEATHERED_COPPER_SLAB);
-            event.accept(ModBlocks.EXPOSED_COPPER_SLAB);
+            event.accept(ModBlocks.COPPER_STAIRS);
             event.accept(ModBlocks.COPPER_SLAB);
+            event.accept(ModBlocks.EXPOSED_COPPER_STAIRS);
+            event.accept(ModBlocks.EXPOSED_COPPER_SLAB);
+            event.accept(ModBlocks.WEATHERED_COPPER_STAIRS);
+            event.accept(ModBlocks.WEATHERED_COPPER_SLAB);
+            event.accept(ModBlocks.OXIDIZED_COPPER_STAIRS);
+            event.accept(ModBlocks.OXIDIZED_COPPER_SLAB);
 
-            event.accept(ModBlocks.WAXED_OXIDIZED_COPPER_SLAB);
-            event.accept(ModBlocks.WAXED_WEATHERED_COPPER_SLAB);
-            event.accept(ModBlocks.WAXED_EXPOSED_COPPER_SLAB);
+            event.accept(ModBlocks.WAXED_COPPER_STAIRS);
             event.accept(ModBlocks.WAXED_COPPER_SLAB);
+            event.accept(ModBlocks.WAXED_EXPOSED_COPPER_STAIRS);
+            event.accept(ModBlocks.WAXED_EXPOSED_COPPER_SLAB);
+            event.accept(ModBlocks.WAXED_WEATHERED_COPPER_STAIRS);
+            event.accept(ModBlocks.WAXED_WEATHERED_COPPER_SLAB);
+            event.accept(ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS);
+            event.accept(ModBlocks.WAXED_OXIDIZED_COPPER_SLAB);
         }
         if (event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(ModBlocks.REDSTONE_STAIRS);

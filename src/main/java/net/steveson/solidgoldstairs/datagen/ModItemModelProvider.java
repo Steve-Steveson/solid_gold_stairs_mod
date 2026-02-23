@@ -35,6 +35,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.AMETHYST_STAIRS);
         evenSimplerBlockItem(ModBlocks.AMETHYST_SLAB);
 
+        evenSimplerBlockItem(ModBlocks.OXIDIZED_COPPER_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WEATHERED_COPPER_STAIRS);
+        evenSimplerBlockItem(ModBlocks.EXPOSED_COPPER_STAIRS);
+        evenSimplerBlockItem(ModBlocks.COPPER_STAIRS);
+
+        evenSimplerBlockItem(ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_WEATHERED_COPPER_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_EXPOSED_COPPER_STAIRS);
+        evenSimplerBlockItem(ModBlocks.WAXED_COPPER_STAIRS);
+
         evenSimplerBlockItem(ModBlocks.OXIDIZED_COPPER_SLAB);
         evenSimplerBlockItem(ModBlocks.WEATHERED_COPPER_SLAB);
         evenSimplerBlockItem(ModBlocks.EXPOSED_COPPER_SLAB);

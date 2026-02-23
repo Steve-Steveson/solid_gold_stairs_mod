@@ -38,11 +38,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.AMETHYST_STAIRS.get(),
                 ModBlocks.AMETHYST_SLAB.get(),
 
+                ModBlocks.OXIDIZED_COPPER_STAIRS.get(),
+                ModBlocks.WEATHERED_COPPER_STAIRS.get(),
+                ModBlocks.EXPOSED_COPPER_STAIRS.get(),
+                ModBlocks.COPPER_STAIRS.get(),
+                ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_WEATHERED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_EXPOSED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_COPPER_STAIRS.get(),
+
                 ModBlocks.OXIDIZED_COPPER_SLAB.get(),
                 ModBlocks.WEATHERED_COPPER_SLAB.get(),
                 ModBlocks.EXPOSED_COPPER_SLAB.get(),
                 ModBlocks.COPPER_SLAB.get(),
-
                 ModBlocks.WAXED_OXIDIZED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_WEATHERED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get(),
@@ -55,11 +63,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.LAPIS_STAIRS.get(),
                 ModBlocks.LAPIS_SLAB.get(),
 
+                ModBlocks.OXIDIZED_COPPER_STAIRS.get(),
+                ModBlocks.WEATHERED_COPPER_STAIRS.get(),
+                ModBlocks.EXPOSED_COPPER_STAIRS.get(),
+                ModBlocks.COPPER_STAIRS.get(),
+                ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_WEATHERED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_EXPOSED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_COPPER_STAIRS.get(),
+
                 ModBlocks.OXIDIZED_COPPER_SLAB.get(),
                 ModBlocks.WEATHERED_COPPER_SLAB.get(),
                 ModBlocks.EXPOSED_COPPER_SLAB.get(),
                 ModBlocks.COPPER_SLAB.get(),
-
                 ModBlocks.WAXED_OXIDIZED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_WEATHERED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get(),
@@ -86,7 +102,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.LAPIS_STAIRS.get(),
                 ModBlocks.DIAMOND_STAIRS.get(),
                 ModBlocks.NETHERITE_STAIRS.get(),
-                ModBlocks.AMETHYST_STAIRS.get()
+                ModBlocks.AMETHYST_STAIRS.get(),
+
+                ModBlocks.OXIDIZED_COPPER_STAIRS.get(),
+                ModBlocks.WEATHERED_COPPER_STAIRS.get(),
+                ModBlocks.EXPOSED_COPPER_STAIRS.get(),
+                ModBlocks.COPPER_STAIRS.get(),
+                ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_WEATHERED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_EXPOSED_COPPER_STAIRS.get(),
+                ModBlocks.WAXED_COPPER_STAIRS.get()
         );
         this.tag(BlockTags.SLABS).add(
                 ModBlocks.COAL_SLAB.get(),

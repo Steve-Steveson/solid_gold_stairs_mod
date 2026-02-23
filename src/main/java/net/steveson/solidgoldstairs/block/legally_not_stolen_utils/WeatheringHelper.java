@@ -4,6 +4,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ChangeOverTimeBlock;
+import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.Optional;
@@ -36,12 +38,72 @@ public class WeatheringHelper {
         Optional<Block> nextBlock = getNextBlock.apply(state.getBlock());
 
         if (nextBlock.isPresent() && random.nextFloat() < OXIDATION_CHANCE) {
-            BlockState newState = nextBlock.get().withPropertiesOf(state);
-            level.setBlockAndUpdate(pos, newState);
+//            BlockState newState = nextBlock.get().withPropertiesOf(state);
+//            level.setBlockAndUpdate(pos, newState);
+            applyChangeOverTime2(state, level, pos, random, nextBlock.get());
             return true;
         }
 
         return false;
+    }
+
+    private static void applyChangeOverTime2(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom, Block nextBlock) {
+        Block pBlock = pState.getBlock();
+
+        int i;
+        Enum<?> agedness;
+        if (pBlock instanceof ChangeOverTimeBlock) {
+            agedness = ((ChangeOverTimeBlock) pBlock).getAge();
+            i = agedness.ordinal();
+        }
+        else {
+            return;
+        }
+        int j = 0;
+        int k = 0;
+
+        for(BlockPos blockpos : BlockPos.withinManhattan(pPos, 4, 4, 4)) {
+            int l = blockpos.distManhattan(pPos);
+            if (l > 4) {
+                break;
+            }
+
+            if (!blockpos.equals(pPos)) {
+                BlockState blockstate = pLevel.getBlockState(blockpos);
+                Block block = blockstate.getBlock();
+                if (block instanceof ChangeOverTimeBlock) {
+                    Enum<?> oenum = ((ChangeOverTimeBlock)block).getAge();
+                    if (agedness.getClass() == oenum.getClass()) {
+                        int i1 = oenum.ordinal();
+                        if (i1 < i) {
+                            return;
+                        }
+
+                        if (i1 > i) {
+                            ++k;
+                        } else {
+                            ++j;
+                        }
+                    }
+                }
+            }
+        }
+
+        float f = (float)(k + 1) / (float)(k + j + 1);
+        float f1 = f * f * getChanceModifier(agedness);
+        if (pRandom.nextFloat() < f1) {
+            BlockState newState = nextBlock.withPropertiesOf(pState);
+            pLevel.setBlockAndUpdate(pPos, newState);
+
+//            this.getNext(pState).ifPresent((p_153039_) -> {
+//                pLevel.setBlockAndUpdate(pPos, p_153039_);
+//            });
+        }
+
+    }
+
+    static float getChanceModifier(Enum<?> pAge) {
+        return pAge == WeatheringCopper.WeatherState.UNAFFECTED ? 0.75F : 1.0F;
     }
 
     /**
