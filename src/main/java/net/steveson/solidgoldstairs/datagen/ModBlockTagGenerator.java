@@ -3,8 +3,10 @@ package net.steveson.solidgoldstairs.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeBlockTagsProvider;
 import net.steveson.solidgoldstairs.SolidGoldStairsMod;
 import net.steveson.solidgoldstairs.block.ModBlocks;
 import org.jetbrains.annotations.Nullable;
@@ -197,6 +199,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
                 ModBlocks.MAGMA_STAIRS.get(),
                 ModBlocks.MAGMA_SLAB.get()
+        );
+
+        this.tag(Tags.Blocks.CHORUS_ADDITIONALLY_GROWS_ON).add(
+                ModBlocks.END_STONE_STAIRS.get(),
+                ModBlocks.END_STONE_SLAB.get()
         );
     }
 }
