@@ -201,9 +201,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.MAGMA_SLAB.get()
         );
 
-        this.tag(Tags.Blocks.CHORUS_ADDITIONALLY_GROWS_ON).add(
-                ModBlocks.END_STONE_STAIRS.get(),
-                ModBlocks.END_STONE_SLAB.get()
-        );
+        this.tag(Tags.Blocks.CHORUS_ADDITIONALLY_GROWS_ON)
+                .add(ModBlocks.END_STONE_STAIRS.get())
+                .add(ModBlocks.END_STONE_SLAB.get());
     }
 }

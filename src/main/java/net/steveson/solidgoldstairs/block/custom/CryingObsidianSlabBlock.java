@@ -7,6 +7,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.material.PushReaction;
 
 public class CryingObsidianSlabBlock extends SlabBlock {
@@ -29,10 +30,35 @@ public class CryingObsidianSlabBlock extends SlabBlock {
                 BlockPos blockpos = pos.relative(direction);
                 BlockState blockstate = level.getBlockState(blockpos);
                 if (!state.canOcclude() || !blockstate.isFaceSturdy(level, blockpos, direction.getOpposite())) {
-                    double d0 = direction.getStepX() == 0 ? randomSource.nextDouble() : 0.5D + (double)direction.getStepX() * 0.6D;
-                    double d1 = direction.getStepY() == 0 ? randomSource.nextDouble() : 0.5D + (double)direction.getStepY() * 0.6D;
-                    double d2 = direction.getStepZ() == 0 ? randomSource.nextDouble() : 0.5D + (double)direction.getStepZ() * 0.6D;
-                    level.addParticle(ParticleTypes.DRIPPING_OBSIDIAN_TEAR, (double)pos.getX() + d0, (double)pos.getY() + d1, (double)pos.getZ() + d2, 0.0D, 0.0D, 0.0D);
+                    double offsetX = direction.getStepX() == 0 ? randomSource.nextDouble() : 0.5D + (double)direction.getStepX() * 0.6D;
+                    double offsetY;
+                    if (direction.getStepY() == 0) {
+                        switch (state.getValue(TYPE)) {
+                            case DOUBLE -> {
+                                offsetY = randomSource.nextDouble();
+                            }
+                            case BOTTOM -> {
+                                offsetY = randomSource.nextDouble() / 2;
+                            }
+                            case TOP -> {
+                                offsetY = randomSource.nextDouble() / 2 + 0.5;
+                            }
+                            default -> {
+                                offsetY = 0.5;
+                            }
+                        }
+                    }
+                    else {
+                        if (state.getValue(TYPE) == SlabType.TOP) {
+                            offsetY = 0.75D + (double)direction.getStepY() * 0.35D;
+                        }
+                        else {
+                            offsetY = 0.5D + (double)direction.getStepY() * 0.6D;
+                        }
+                    }
+
+                    double offsetZ = direction.getStepZ() == 0 ? randomSource.nextDouble() : 0.5D + (double)direction.getStepZ() * 0.6D;
+                    level.addParticle(ParticleTypes.DRIPPING_OBSIDIAN_TEAR, (double)pos.getX() + offsetX, (double)pos.getY() + offsetY, (double)pos.getZ() + offsetZ, 0.0D, 0.0D, 0.0D);
                 }
             }
         }
