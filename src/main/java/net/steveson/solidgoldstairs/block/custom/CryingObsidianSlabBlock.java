@@ -3,8 +3,11 @@ package net.steveson.solidgoldstairs.block.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SlabType;
@@ -19,6 +22,37 @@ public class CryingObsidianSlabBlock extends SlabBlock {
     public PushReaction getPistonPushReaction(BlockState state) {
         return PushReaction.BLOCK;
     }
+
+
+    @Override
+    public boolean useShapeForLightOcclusion(BlockState pState) {
+        return false;
+    }
+    @Override
+    public boolean propagatesSkylightDown(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return false;
+    }
+    public int getLightBlock(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return 15;
+    }
+
+//    public int getLightBlock(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+//
+//
+//        if (light == 15){
+//            return
+//        }
+//        return 1;
+//    }
+
+//    Integer light =0;
+//    public int getLight(ServerLevel pLevel, BlockPos pPos) {
+//        return pLevel.getBrightness(LightLayer.BLOCK, pPos);
+//    }
+
+//    public Integer getLight(ServerLevel pLevel, BlockPos pPos) {
+//        return pLevel.getBrightness(LightLayer.BLOCK, pPos);
+//    }
 
     /**
      * Called periodically clientside on blocks near the player to show effects (like furnace fire particles).

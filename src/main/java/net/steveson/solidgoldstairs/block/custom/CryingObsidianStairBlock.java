@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -19,6 +20,19 @@ public class CryingObsidianStairBlock extends StairBlock {
     @Override
     public PushReaction getPistonPushReaction(BlockState state) {
         return PushReaction.BLOCK;
+    }
+
+
+    @Override
+    public boolean useShapeForLightOcclusion(BlockState pState) {
+        return false;
+    }
+    @Override
+    public boolean propagatesSkylightDown(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return false;
+    }
+    public int getLightBlock(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return 15;
     }
 
     /**

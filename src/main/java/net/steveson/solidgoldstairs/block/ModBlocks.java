@@ -177,13 +177,27 @@ public class ModBlocks {
                 public boolean useShapeForLightOcclusion(BlockState pState) {
                     return false;
                 }
-
+                @Override
+                public boolean propagatesSkylightDown(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+                    return false;
+                }
+                @Override
+                public int getLightBlock(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+                    return 15;
+                }
             });
     public static final RegistryObject<Block> GLOWSTONE_SLAB = registerBlock("glowstone_slab",
             ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).isRedstoneConductor(ModBlocks::never)) {
                 @Override
                 public boolean useShapeForLightOcclusion(BlockState pState) {
                     return false;
+                }
+                @Override
+                public boolean propagatesSkylightDown(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+                    return false;
+                }
+                public int getLightBlock(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+                    return 15;
                 }
             });
 
