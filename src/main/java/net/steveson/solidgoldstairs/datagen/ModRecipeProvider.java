@@ -69,10 +69,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.OBSIDIAN, ModBlocks.OBSIDIAN_SLAB,consumer);
         registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.CRYING_OBSIDIAN, ModBlocks.CRYING_OBSIDIAN_STAIRS,consumer);
         registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.CRYING_OBSIDIAN, ModBlocks.CRYING_OBSIDIAN_SLAB,consumer);
-        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.MAGMA_BLOCK, ModBlocks.MAGMA_STAIRS,consumer);
-        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.MAGMA_BLOCK, ModBlocks.MAGMA_SLAB,consumer);
-        registerStairsCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.END_STONE, ModBlocks.END_STONE_STAIRS,consumer);
-        registerSlabCraftingRecipe(RecipeCategory.BUILDING_BLOCKS, Blocks.END_STONE, ModBlocks.END_STONE_SLAB,consumer);
 
 
         registerWaxCraftingRecipe(ModBlocks.OXIDIZED_COPPER_STAIRS, ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS, consumer);
@@ -132,10 +128,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         registerStonecuttingRecipe(Blocks.OBSIDIAN, ModBlocks.OBSIDIAN_SLAB, consumer, 2);
         registerStonecuttingRecipe(Blocks.CRYING_OBSIDIAN, ModBlocks.CRYING_OBSIDIAN_STAIRS, consumer);
         registerStonecuttingRecipe(Blocks.CRYING_OBSIDIAN, ModBlocks.CRYING_OBSIDIAN_SLAB, consumer, 2);
-        registerStonecuttingRecipe(Blocks.MAGMA_BLOCK, ModBlocks.MAGMA_STAIRS, consumer);
-        registerStonecuttingRecipe(Blocks.MAGMA_BLOCK, ModBlocks.MAGMA_SLAB, consumer, 2);
-        registerStonecuttingRecipe(Blocks.END_STONE, ModBlocks.END_STONE_STAIRS, consumer);
-        registerStonecuttingRecipe(Blocks.END_STONE, ModBlocks.END_STONE_SLAB, consumer, 2);
     }
 
 

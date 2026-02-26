@@ -65,11 +65,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.OBSIDIAN_STAIRS.get(),
                 ModBlocks.OBSIDIAN_SLAB.get(),
                 ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
-                ModBlocks.CRYING_OBSIDIAN_SLAB.get(),
-                ModBlocks.MAGMA_STAIRS.get(),
-                ModBlocks.MAGMA_SLAB.get(),
-                ModBlocks.END_STONE_STAIRS.get(),
-                ModBlocks.END_STONE_SLAB.get()
+                ModBlocks.CRYING_OBSIDIAN_SLAB.get()
         );
 
 
@@ -139,9 +135,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                 ModBlocks.GLOWSTONE_STAIRS.get(),
                 ModBlocks.OBSIDIAN_STAIRS.get(),
-                ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
-                ModBlocks.MAGMA_STAIRS.get(),
-                ModBlocks.END_STONE_STAIRS.get()
+                ModBlocks.CRYING_OBSIDIAN_STAIRS.get()
         );
         this.tag(BlockTags.SLABS).add(
                 ModBlocks.COAL_SLAB.get(),
@@ -167,9 +161,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                 ModBlocks.GLOWSTONE_SLAB.get(),
                 ModBlocks.OBSIDIAN_SLAB.get(),
-                ModBlocks.CRYING_OBSIDIAN_SLAB.get(),
-                ModBlocks.MAGMA_SLAB.get(),
-                ModBlocks.END_STONE_SLAB.get()
+                ModBlocks.CRYING_OBSIDIAN_SLAB.get()
         );
 
 
@@ -182,27 +174,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.OBSIDIAN_STAIRS.get(),
                 ModBlocks.OBSIDIAN_SLAB.get(),
                 ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
-                ModBlocks.CRYING_OBSIDIAN_SLAB.get(),
-                ModBlocks.END_STONE_STAIRS.get(),
-                ModBlocks.END_STONE_SLAB.get()
+                ModBlocks.CRYING_OBSIDIAN_SLAB.get()
         );
-
-
-        this.tag(BlockTags.INFINIBURN_END).add(
-                ModBlocks.MAGMA_STAIRS.get(),
-                ModBlocks.MAGMA_SLAB.get()
-        );
-        this.tag(BlockTags.INFINIBURN_NETHER).add(
-                ModBlocks.MAGMA_STAIRS.get(),
-                ModBlocks.MAGMA_SLAB.get()
-        );
-        this.tag(BlockTags.INFINIBURN_OVERWORLD).add(
-                ModBlocks.MAGMA_STAIRS.get(),
-                ModBlocks.MAGMA_SLAB.get()
-        );
-
-        this.tag(Tags.Blocks.CHORUS_ADDITIONALLY_GROWS_ON)
-                .add(ModBlocks.END_STONE_STAIRS.get())
-                .add(ModBlocks.END_STONE_SLAB.get());
     }
 }

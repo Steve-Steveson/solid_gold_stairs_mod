@@ -209,18 +209,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYING_OBSIDIAN_SLAB = registerBlock("crying_obsidian_slab",
             ()-> new CryingObsidianSlabBlock(BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN)));
 
-    public static final RegistryObject<Block> MAGMA_STAIRS = registerBlock("magma_stairs",
-            ()-> new MagmaStairBlock(()-> Blocks.MAGMA_BLOCK.defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)));
-    public static final RegistryObject<Block> MAGMA_SLAB = registerBlock("magma_slab",
-            ()-> new MagmaSlabBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)));
-
-    public static final RegistryObject<Block> END_STONE_STAIRS = registerBlock("end_stone_stairs",
-            ()-> new StairBlock(()-> Blocks.END_STONE.defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.END_STONE)));
-    public static final RegistryObject<Block> END_STONE_SLAB = registerBlock("end_stone_slab",
-            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)));
-
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

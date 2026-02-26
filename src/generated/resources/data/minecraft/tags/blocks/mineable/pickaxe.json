@@ -41,10 +41,6 @@
     "solid_gold_stairs:obsidian_stairs",
     "solid_gold_stairs:obsidian_slab",
     "solid_gold_stairs:crying_obsidian_stairs",
-    "solid_gold_stairs:crying_obsidian_slab",
-    "solid_gold_stairs:magma_stairs",
-    "solid_gold_stairs:magma_slab",
-    "solid_gold_stairs:end_stone_stairs",
-    "solid_gold_stairs:end_stone_slab"
+    "solid_gold_stairs:crying_obsidian_slab"
   ]
 }

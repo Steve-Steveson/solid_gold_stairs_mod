@@ -41,8 +41,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.GLOWSTONE_STAIRS.get());
         this.dropSelf(ModBlocks.OBSIDIAN_STAIRS.get());
         this.dropSelf(ModBlocks.CRYING_OBSIDIAN_STAIRS.get());
-        this.dropSelf(ModBlocks.MAGMA_STAIRS.get());
-        this.dropSelf(ModBlocks.END_STONE_STAIRS.get());
+
 
         this.add(ModBlocks.COAL_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.COAL_SLAB.get()));
@@ -90,10 +89,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.OBSIDIAN_SLAB.get()));
         this.add(ModBlocks.CRYING_OBSIDIAN_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.CRYING_OBSIDIAN_SLAB.get()));
-        this.add(ModBlocks.MAGMA_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.MAGMA_SLAB.get()));
-        this.add(ModBlocks.END_STONE_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.END_STONE_SLAB.get()));
+
     }
 
     @Override

@@ -63,10 +63,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.OBSIDIAN_SLAB);
         evenSimplerBlockItem(ModBlocks.CRYING_OBSIDIAN_STAIRS);
         evenSimplerBlockItem(ModBlocks.CRYING_OBSIDIAN_SLAB);
-        evenSimplerBlockItem(ModBlocks.MAGMA_STAIRS);
-        evenSimplerBlockItem(ModBlocks.MAGMA_SLAB);
-        evenSimplerBlockItem(ModBlocks.END_STONE_STAIRS);
-        evenSimplerBlockItem(ModBlocks.END_STONE_SLAB);
     }
 
     public void evenSimplerBlockItem(RegistryObject<Block> block) {

@@ -50,8 +50,6 @@ public class SolidGoldStairsMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.END_STONE_STAIRS);
-            event.accept(ModBlocks.END_STONE_SLAB);
             event.accept(ModBlocks.COAL_STAIRS);
             event.accept(ModBlocks.COAL_SLAB);
             event.accept(ModBlocks.IRON_STAIRS);
@@ -98,14 +96,10 @@ public class SolidGoldStairsMod
             event.accept(ModBlocks.REDSTONE_SLAB);
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-            event.accept(ModBlocks.MAGMA_STAIRS);
-            event.accept(ModBlocks.MAGMA_SLAB);
             event.accept(ModBlocks.OBSIDIAN_STAIRS);
             event.accept(ModBlocks.OBSIDIAN_SLAB);
             event.accept(ModBlocks.CRYING_OBSIDIAN_STAIRS);
             event.accept(ModBlocks.CRYING_OBSIDIAN_SLAB);
-            event.accept(ModBlocks.END_STONE_STAIRS);
-            event.accept(ModBlocks.END_STONE_SLAB);
             event.accept(ModBlocks.GLOWSTONE_STAIRS);
             event.accept(ModBlocks.GLOWSTONE_SLAB);
         }
@@ -114,8 +108,6 @@ public class SolidGoldStairsMod
             event.accept(ModBlocks.GLOWSTONE_SLAB);
             event.accept(ModBlocks.CRYING_OBSIDIAN_STAIRS);
             event.accept(ModBlocks.CRYING_OBSIDIAN_SLAB);
-            event.accept(ModBlocks.MAGMA_STAIRS);
-            event.accept(ModBlocks.MAGMA_SLAB);
         }
     }
 

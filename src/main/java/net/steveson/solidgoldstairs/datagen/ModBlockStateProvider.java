@@ -32,8 +32,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) ModBlocks.DIAMOND_SLAB.get()), blockTexture(Blocks.DIAMOND_BLOCK), blockTexture(Blocks.DIAMOND_BLOCK));
         stairsBlock(((StairBlock) ModBlocks.NETHERITE_STAIRS.get()), blockTexture(Blocks.NETHERITE_BLOCK));
         slabBlock(((SlabBlock) ModBlocks.NETHERITE_SLAB.get()), blockTexture(Blocks.NETHERITE_BLOCK), blockTexture(Blocks.NETHERITE_BLOCK));
-        stairsBlock(((StairBlock) ModBlocks.CHISELED_QUARTZ_STAIRS.get()), blockTexture(Blocks.CHISELED_QUARTZ_BLOCK));
-        slabBlock(((SlabBlock) ModBlocks.CHISELED_QUARTZ_SLAB.get()), blockTexture(Blocks.CHISELED_QUARTZ_BLOCK), blockTexture(Blocks.CHISELED_QUARTZ_BLOCK));
+        // chiseled quartz has different top texture
         stairsBlock(((StairBlock) ModBlocks.QUARTZ_BRICK_STAIRS.get()), blockTexture(Blocks.QUARTZ_BRICKS));
         slabBlock(((SlabBlock) ModBlocks.QUARTZ_BRICK_SLAB.get()), blockTexture(Blocks.QUARTZ_BRICKS), blockTexture(Blocks.QUARTZ_BRICKS));
         stairsBlock(((StairBlock) ModBlocks.AMETHYST_STAIRS.get()), blockTexture(Blocks.AMETHYST_BLOCK));
@@ -63,8 +62,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) ModBlocks.OBSIDIAN_SLAB.get()), blockTexture(Blocks.OBSIDIAN), blockTexture(Blocks.OBSIDIAN));
         stairsBlock(((StairBlock) ModBlocks.CRYING_OBSIDIAN_STAIRS.get()), blockTexture(Blocks.CRYING_OBSIDIAN));
         slabBlock(((SlabBlock) ModBlocks.CRYING_OBSIDIAN_SLAB.get()), blockTexture(Blocks.CRYING_OBSIDIAN), blockTexture(Blocks.CRYING_OBSIDIAN));
-//magma added manually because the texture file doesn't match block name
-        stairsBlock(((StairBlock) ModBlocks.END_STONE_STAIRS.get()), blockTexture(Blocks.END_STONE));
-        slabBlock(((SlabBlock) ModBlocks.END_STONE_SLAB.get()), blockTexture(Blocks.END_STONE), blockTexture(Blocks.END_STONE));
     }
 }
