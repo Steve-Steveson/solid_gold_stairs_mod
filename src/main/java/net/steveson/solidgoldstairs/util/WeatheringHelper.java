@@ -1,4 +1,4 @@
-package net.steveson.solidgoldstairs.block.legally_not_stolen_utils;
+package net.steveson.solidgoldstairs.util;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
