@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.steveson.solidgoldstairs.block.ModBlocks;
-import net.steveson.solidgoldstairs.block.legally_not_stolen_utils.WeatheringHelper;
+import net.steveson.solidgoldstairs.util.WeatheringHelper;
 
 import java.util.Optional;
 
