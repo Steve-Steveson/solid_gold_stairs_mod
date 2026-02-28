@@ -55,12 +55,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) ModBlocks.WAXED_WEATHERED_COPPER_SLAB.get()), blockTexture(Blocks.WEATHERED_COPPER), blockTexture(Blocks.WEATHERED_COPPER));
         slabBlock(((SlabBlock) ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get()), blockTexture(Blocks.EXPOSED_COPPER), blockTexture(Blocks.EXPOSED_COPPER));
         slabBlock(((SlabBlock) ModBlocks.WAXED_COPPER_SLAB.get()), blockTexture(Blocks.COPPER_BLOCK), blockTexture(Blocks.COPPER_BLOCK));
-
-        stairsBlock(((StairBlock) ModBlocks.GLOWSTONE_STAIRS.get()), blockTexture(Blocks.GLOWSTONE));
-        slabBlock(((SlabBlock) ModBlocks.GLOWSTONE_SLAB.get()), blockTexture(Blocks.GLOWSTONE), blockTexture(Blocks.GLOWSTONE));
-        stairsBlock(((StairBlock) ModBlocks.OBSIDIAN_STAIRS.get()), blockTexture(Blocks.OBSIDIAN));
-        slabBlock(((SlabBlock) ModBlocks.OBSIDIAN_SLAB.get()), blockTexture(Blocks.OBSIDIAN), blockTexture(Blocks.OBSIDIAN));
-        stairsBlock(((StairBlock) ModBlocks.CRYING_OBSIDIAN_STAIRS.get()), blockTexture(Blocks.CRYING_OBSIDIAN));
-        slabBlock(((SlabBlock) ModBlocks.CRYING_OBSIDIAN_SLAB.get()), blockTexture(Blocks.CRYING_OBSIDIAN), blockTexture(Blocks.CRYING_OBSIDIAN));
     }
 }

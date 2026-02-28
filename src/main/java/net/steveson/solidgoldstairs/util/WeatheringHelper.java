@@ -11,7 +11,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.Optional;
 import java.util.function.Function;
 
-// This file copied from a mod called Copper Age Backport by Smallinger, which is allowed under the MIT License
+// Most of this file is copied from a mod called Copper Age Backport by Smallinger, which is allowed under the MIT License.
+// The rest is splicing in a method from the vanilla code to check neighboring blocks before oxidation.
 /**
  * Utility class for handling custom weathering/oxidation logic.
  * Use this when blocks can't be registered in vanilla's immutable WeatheringCopper maps.
@@ -47,6 +48,7 @@ public class WeatheringHelper {
         return false;
     }
 
+    // this method is the one copied from the vanilla code that checks its neighbors to influence weathering probability.
     private static void applyChangeOverTime2(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom, Block nextBlock) {
         Block pBlock = pState.getBlock();
 

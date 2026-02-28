@@ -38,10 +38,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WAXED_EXPOSED_COPPER_STAIRS.get());
         this.dropSelf(ModBlocks.WAXED_COPPER_STAIRS.get());
 
-        this.dropSelf(ModBlocks.GLOWSTONE_STAIRS.get());
-        this.dropSelf(ModBlocks.OBSIDIAN_STAIRS.get());
-        this.dropSelf(ModBlocks.CRYING_OBSIDIAN_STAIRS.get());
-
 
         this.add(ModBlocks.COAL_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.COAL_SLAB.get()));
@@ -82,14 +78,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 block -> createSlabItemTable(ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get()));
         this.add(ModBlocks.WAXED_COPPER_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.WAXED_COPPER_SLAB.get()));
-
-        this.add(ModBlocks.GLOWSTONE_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.GLOWSTONE_SLAB.get()));
-        this.add(ModBlocks.OBSIDIAN_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.OBSIDIAN_SLAB.get()));
-        this.add(ModBlocks.CRYING_OBSIDIAN_SLAB.get(),
-                block -> createSlabItemTable(ModBlocks.CRYING_OBSIDIAN_SLAB.get()));
-
     }
 
     @Override

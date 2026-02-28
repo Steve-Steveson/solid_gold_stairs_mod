@@ -18,9 +18,6 @@
     "solid_gold_stairs:waxed_oxidized_copper_stairs",
     "solid_gold_stairs:waxed_weathered_copper_stairs",
     "solid_gold_stairs:waxed_exposed_copper_stairs",
-    "solid_gold_stairs:waxed_copper_stairs",
-    "solid_gold_stairs:glowstone_stairs",
-    "solid_gold_stairs:obsidian_stairs",
-    "solid_gold_stairs:crying_obsidian_stairs"
+    "solid_gold_stairs:waxed_copper_stairs"
   ]
 }

@@ -60,12 +60,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.WAXED_OXIDIZED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_WEATHERED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get(),
-                ModBlocks.WAXED_COPPER_SLAB.get(),
-
-                ModBlocks.OBSIDIAN_STAIRS.get(),
-                ModBlocks.OBSIDIAN_SLAB.get(),
-                ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
-                ModBlocks.CRYING_OBSIDIAN_SLAB.get()
+                ModBlocks.WAXED_COPPER_SLAB.get()
         );
 
 
@@ -103,11 +98,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         );
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL).add(
                 ModBlocks.NETHERITE_STAIRS.get(),
-                ModBlocks.NETHERITE_SLAB.get(),
-                ModBlocks.OBSIDIAN_STAIRS.get(),
-                ModBlocks.OBSIDIAN_SLAB.get(),
-                ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
-                ModBlocks.CRYING_OBSIDIAN_SLAB.get()
+                ModBlocks.NETHERITE_SLAB.get()
         );
 
 
@@ -131,11 +122,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.WAXED_OXIDIZED_COPPER_STAIRS.get(),
                 ModBlocks.WAXED_WEATHERED_COPPER_STAIRS.get(),
                 ModBlocks.WAXED_EXPOSED_COPPER_STAIRS.get(),
-                ModBlocks.WAXED_COPPER_STAIRS.get(),
-
-                ModBlocks.GLOWSTONE_STAIRS.get(),
-                ModBlocks.OBSIDIAN_STAIRS.get(),
-                ModBlocks.CRYING_OBSIDIAN_STAIRS.get()
+                ModBlocks.WAXED_COPPER_STAIRS.get()
         );
         this.tag(BlockTags.SLABS).add(
                 ModBlocks.COAL_SLAB.get(),
@@ -157,24 +144,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 ModBlocks.WAXED_OXIDIZED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_WEATHERED_COPPER_SLAB.get(),
                 ModBlocks.WAXED_EXPOSED_COPPER_SLAB.get(),
-                ModBlocks.WAXED_COPPER_SLAB.get(),
-
-                ModBlocks.GLOWSTONE_SLAB.get(),
-                ModBlocks.OBSIDIAN_SLAB.get(),
-                ModBlocks.CRYING_OBSIDIAN_SLAB.get()
+                ModBlocks.WAXED_COPPER_SLAB.get()
         );
 
 
         this.tag(BlockTags.GUARDED_BY_PIGLINS).add(
                 ModBlocks.GOLD_STAIRS.get(),
                 ModBlocks.GOLD_SLAB.get()
-        );
-
-        this.tag(BlockTags.DRAGON_IMMUNE).add(
-                ModBlocks.OBSIDIAN_STAIRS.get(),
-                ModBlocks.OBSIDIAN_SLAB.get(),
-                ModBlocks.CRYING_OBSIDIAN_STAIRS.get(),
-                ModBlocks.CRYING_OBSIDIAN_SLAB.get()
         );
     }
 }

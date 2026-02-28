@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "minecraft:glowstone"
-  },
-  "result": "solid_gold_stairs:glowstone_stairs"
-}

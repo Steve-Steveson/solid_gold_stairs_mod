@@ -170,45 +170,6 @@ public class ModBlocks {
             ()-> new CopperSlabBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK), WeatheringCopper.WeatherState.UNAFFECTED));
 
 
-    public static final RegistryObject<Block> GLOWSTONE_STAIRS = registerBlock("glowstone_stairs",
-            ()-> new StairBlock(()-> Blocks.GLOWSTONE.defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.GLOWSTONE)) {
-                @Override
-                public boolean useShapeForLightOcclusion(BlockState pState) {
-                    return false;
-                }
-
-            });
-    public static final RegistryObject<Block> GLOWSTONE_SLAB = registerBlock("glowstone_slab",
-            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).isRedstoneConductor(ModBlocks::never)) {
-                @Override
-                public boolean useShapeForLightOcclusion(BlockState pState) {
-                    return false;
-                }
-            });
-
-    public static final RegistryObject<Block> OBSIDIAN_STAIRS = registerBlock("obsidian_stairs",
-            ()-> new StairBlock(()-> Blocks.OBSIDIAN.defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)) {
-                @Override
-                public PushReaction getPistonPushReaction(BlockState state) {
-                    return PushReaction.BLOCK;
-                }
-            });
-    public static final RegistryObject<Block> OBSIDIAN_SLAB = registerBlock("obsidian_slab",
-            ()-> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)) {
-                @Override
-                public PushReaction getPistonPushReaction(BlockState state) {
-                    return PushReaction.BLOCK;
-                }
-            });
-
-    public static final RegistryObject<Block> CRYING_OBSIDIAN_STAIRS = registerBlock("crying_obsidian_stairs",
-            ()-> new CryingObsidianStairBlock(()-> Blocks.CRYING_OBSIDIAN.defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN)));
-    public static final RegistryObject<Block> CRYING_OBSIDIAN_SLAB = registerBlock("crying_obsidian_slab",
-            ()-> new CryingObsidianSlabBlock(BlockBehaviour.Properties.copy(Blocks.CRYING_OBSIDIAN)));
-
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
