@@ -4,6 +4,8 @@ import net.minecraft.world.level.block.Block;
 
 import java.util.Optional;
 
+// This interface creates generic methods to allow the LightningBoltMixin to de-age copper on lightning strike.
+
 public interface SteveHasWeatheringCopper {
 
      public Optional<Block> getPreviousBlockGeneric(Block block);

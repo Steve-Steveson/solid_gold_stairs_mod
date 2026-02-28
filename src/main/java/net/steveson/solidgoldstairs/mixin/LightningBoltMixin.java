@@ -17,6 +17,8 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 import java.util.Iterator;
 import java.util.Optional;
 
+//This mixin allows lightning strikes to de-oxidize our copper variants the same as vanilla
+
 @Mixin(LightningBolt.class)
 public abstract class LightningBoltMixin extends Entity {
 
