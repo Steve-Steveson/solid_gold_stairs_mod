@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.SlabType;
+import net.steveson.solidgoldstairs.util.ModTags;
 
 public class PoweredSlabBlock extends SlabBlock {
     public PoweredSlabBlock(Properties pProperties) {
@@ -42,30 +43,22 @@ public class PoweredSlabBlock extends SlabBlock {
                 return 7;
             }
             if(pSide == Direction.WEST &&
-                    pBlockAccess.getBlockState(pPos.east()).getBlock() !=  Blocks.REDSTONE_WIRE &&
-                    pBlockAccess.getBlockState(pPos.east()).getBlock() !=  Blocks.REPEATER &&
-                    pBlockAccess.getBlockState(pPos.east()).getBlock() !=  Blocks.COMPARATOR
+                    !pBlockAccess.getBlockState(pPos.east()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)
             ) {
                 return 7;
             }
             if(pSide == Direction.SOUTH &&
-                    pBlockAccess.getBlockState(pPos.north()).getBlock() !=  Blocks.REDSTONE_WIRE &&
-                    pBlockAccess.getBlockState(pPos.north()).getBlock() !=  Blocks.REPEATER &&
-                    pBlockAccess.getBlockState(pPos.north()).getBlock() !=  Blocks.COMPARATOR
+                    !pBlockAccess.getBlockState(pPos.north()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)
             ) {
                 return 7;
             }
             if(pSide == Direction.EAST &&
-                    pBlockAccess.getBlockState(pPos.west()).getBlock() !=  Blocks.REDSTONE_WIRE &&
-                    pBlockAccess.getBlockState(pPos.west()).getBlock() !=  Blocks.REPEATER &&
-                    pBlockAccess.getBlockState(pPos.west()).getBlock() !=  Blocks.COMPARATOR
+                    !pBlockAccess.getBlockState(pPos.west()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)
             ) {
                 return 7;
             }
             if(pSide == Direction.NORTH &&
-                    pBlockAccess.getBlockState(pPos.south()).getBlock() !=  Blocks.REDSTONE_WIRE &&
-                    pBlockAccess.getBlockState(pPos.south()).getBlock() !=  Blocks.REPEATER &&
-                    pBlockAccess.getBlockState(pPos.south()).getBlock() !=  Blocks.COMPARATOR
+                    !pBlockAccess.getBlockState(pPos.south()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)
             ) {
                 return 7;
             }

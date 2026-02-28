@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.block.state.properties.StairsShape;
+import net.steveson.solidgoldstairs.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
@@ -30,18 +31,14 @@ public class PoweredStairBlock extends StairBlock {
                 return 0;
             }
             if (pBlockState.getValue(FACING) == pSide){
-                if (pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getOpposite())).getBlock() != Blocks.REDSTONE_WIRE &&
-                        pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getOpposite())).getBlock() != Blocks.REPEATER &&
-                        pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getOpposite())).getBlock() != Blocks.COMPARATOR) {
+                if (!pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getOpposite())).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)) {
                     return 11;
                 }
                 return 0;
             }
             if (pBlockState.getValue(SHAPE) == StairsShape.OUTER_LEFT) {
                 if (pBlockState.getValue(FACING).getCounterClockWise() == pSide){
-                    if (pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getClockWise())).getBlock() != Blocks.REDSTONE_WIRE &&
-                            pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getClockWise())).getBlock() != Blocks.REPEATER &&
-                            pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getClockWise())).getBlock() != Blocks.COMPARATOR) {
+                    if (!pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getClockWise())).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)) {
                         return 11;
                     }
                     return 0;
@@ -49,9 +46,7 @@ public class PoweredStairBlock extends StairBlock {
             }
             if (pBlockState.getValue(SHAPE) == StairsShape.OUTER_RIGHT) {
                 if (pBlockState.getValue(FACING).getClockWise() == pSide){
-                    if (pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getCounterClockWise())).getBlock() != Blocks.REDSTONE_WIRE &&
-                            pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getCounterClockWise())).getBlock() != Blocks.REPEATER &&
-                            pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getCounterClockWise())).getBlock() != Blocks.COMPARATOR) {
+                    if (!pBlockAccess.getBlockState(pPos.relative(pBlockState.getValue(FACING).getCounterClockWise())).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)) {
                         return 11;
                     }
                     return 0;
