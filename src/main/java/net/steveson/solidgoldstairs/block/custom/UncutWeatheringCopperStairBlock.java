@@ -23,7 +23,7 @@ import net.steveson.solidgoldstairs.util.WeatheringHelper;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-public class UncutWeatheringCopperStairBlock extends StairBlock implements WeatheringCopper {
+public class UncutWeatheringCopperStairBlock extends StairBlock implements WeatheringCopper, SteveHasWeatheringCopper {
 
     private final WeatheringCopper.WeatherState weatheringState;
 
@@ -142,4 +142,14 @@ public class UncutWeatheringCopperStairBlock extends StairBlock implements Weath
         return this.weatheringState;
     }
 
+
+    @Override
+    public Optional<Block> getPreviousBlockGeneric(Block block) {
+        return getPreviousBlock(block);
+    }
+
+    @Override
+    public Optional<Block> getNextBlockGeneric(Block block) {
+        return getNextBlock(block);
+    }
 }
