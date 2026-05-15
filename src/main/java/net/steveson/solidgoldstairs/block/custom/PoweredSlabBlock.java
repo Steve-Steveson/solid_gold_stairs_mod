@@ -42,24 +42,7 @@ public class PoweredSlabBlock extends SlabBlock {
             if (pSide == Direction.DOWN) {
                 return 7;
             }
-            if(pSide == Direction.WEST &&
-                    !pBlockAccess.getBlockState(pPos.east()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)
-            ) {
-                return 7;
-            }
-            if(pSide == Direction.SOUTH &&
-                    !pBlockAccess.getBlockState(pPos.north()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)
-            ) {
-                return 7;
-            }
-            if(pSide == Direction.EAST &&
-                    !pBlockAccess.getBlockState(pPos.west()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)
-            ) {
-                return 7;
-            }
-            if(pSide == Direction.NORTH &&
-                    !pBlockAccess.getBlockState(pPos.south()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)
-            ) {
+            if (!pBlockAccess.getBlockState(pPos.relative(pSide.getOpposite())).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)) {
                 return 7;
             }
         }
