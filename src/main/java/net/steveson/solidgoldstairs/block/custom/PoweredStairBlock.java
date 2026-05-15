@@ -27,7 +27,7 @@ public class PoweredStairBlock extends StairBlock {
 
     public int getSignal(BlockState pBlockState, BlockGetter pBlockAccess, BlockPos pPos, Direction pSide) {
         if (pBlockState.getValue(HALF) == Half.TOP) {
-            if (pSide == Direction.UP){
+            if (pSide == Direction.UP && pBlockAccess.getBlockState(pPos.below()).is(ModTags.Blocks.LOW_REDSTONE_COMPONENTS)){
                 return 0;
             }
             if (pBlockState.getValue(FACING) == pSide){
