@@ -63,7 +63,6 @@ public class ModBlocks {
                 }
             }, 8000);
 
-
     public static final RegistryObject<Block> IRON_STAIRS = registerBlock("iron_stairs",
             ()-> new StairBlock(()-> Blocks.IRON_BLOCK.defaultBlockState(),
                     BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
